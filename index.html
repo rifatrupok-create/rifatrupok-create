@@ -1298,11 +1298,20 @@
     }
 
     .reveal {
-      opacity: 0; transform: translateY(28px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.75s ease, transform 0.75s ease;
     }
 
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .js-loaded .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+
+    .js-loaded .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ── RESPONSIVE ──────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -2539,19 +2548,31 @@
     }
 
     // ── Scroll reveal ──────────────────────────────────────
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
-          const idx = siblings.indexOf(entry.target);
-          setTimeout(() => entry.target.classList.add('visible'), idx * 90);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    // Mark body so CSS knows JS is active (reveals start hidden only when JS runs)
+    document.body.classList.add('js-loaded');
 
-    reveals.forEach(el => observer.observe(el));
+    const reveals = document.querySelectorAll('.reveal');
+
+    if (!('IntersectionObserver' in window)) {
+      // Fallback for old browsers: show everything immediately
+      reveals.forEach(el => el.classList.add('visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
+
+      reveals.forEach(el => observer.observe(el));
+
+      // Hard fallback: force-show anything still hidden after 1.5s
+      setTimeout(() => {
+        reveals.forEach(el => el.classList.add('visible'));
+      }, 1500);
+    }
 
     // ── Active nav link ────────────────────────────────────
     const sections = document.querySelectorAll('section[id]');
