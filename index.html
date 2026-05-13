@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rifat Islam Rupok — Development, Research & Analytics Professional</title>
-
+ 
   <!-- ── Primary Meta ───────────────────────────────────── -->
   <meta name="description" content="Rifat Islam Rupok — Development Coordinator, data analyst, and social science researcher based in Winnipeg, Manitoba. Managing $17M+ in grants at Siloam Mission with expertise in project management, fundraising, and South Asian geopolitics research." />
   <meta name="author" content="Rifat Islam Rupok" />
-
+ 
   <!-- ── Open Graph (LinkedIn, WhatsApp, Slack, Facebook) ── -->
   <meta property="og:type"         content="website" />
   <meta property="og:url"          content="https://rupokri.ca/" />
@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale"       content="en_CA" />
   <meta property="og:site_name"    content="Rifat Islam Rupok" />
-
+ 
   <!-- ── Twitter / X Card ──────────────────────────────── -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:url"         content="https://rupokri.ca/" />
@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --white:   #ffffff;
       --off:     #f6f5f2;
@@ -47,9 +47,9 @@
       --sans:    'Outfit', -apple-system, sans-serif;
       --radius:  14px;
     }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       font-family: var(--sans);
       background: var(--white);
@@ -57,7 +57,7 @@
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
-
+ 
     /* ── NAV ─────────────────────────────────────────────── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -69,7 +69,7 @@
       -webkit-backdrop-filter: saturate(180%) blur(24px);
       border-bottom: 1px solid rgba(0,0,0,0.07);
     }
-
+ 
     .nav-name {
       font-family: var(--serif);
       font-weight: 500;
@@ -79,11 +79,11 @@
       text-decoration: none;
       flex-shrink: 0;
     }
-
+ 
     .nav-links {
       display: flex; gap: 32px; list-style: none;
     }
-
+ 
     .nav-links a {
       font-size: 13px;
       font-weight: 400;
@@ -93,10 +93,10 @@
       transition: opacity 0.2s;
       letter-spacing: 0.02em;
     }
-
+ 
     .nav-links a:hover,
     .nav-links a.active { opacity: 1; }
-
+ 
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -106,18 +106,18 @@
       background: none;
       border: none;
     }
-
+ 
     .nav-hamburger span {
       display: block; width: 22px; height: 1.5px;
       background: var(--dark);
       transition: all 0.3s ease;
       transform-origin: center;
     }
-
+ 
     .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
+ 
     .mobile-menu {
       display: none;
       position: fixed; top: 54px; left: 0; right: 0;
@@ -128,9 +128,9 @@
       z-index: 99;
       flex-direction: column;
     }
-
+ 
     .mobile-menu.open { display: flex; }
-
+ 
     .mobile-menu a {
       font-size: 15px; font-weight: 400;
       color: var(--dark); text-decoration: none;
@@ -138,10 +138,10 @@
       border-bottom: 1px solid var(--smoke);
       opacity: 0.8;
     }
-
+ 
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { opacity: 1; }
-
+ 
     /* ── HERO ────────────────────────────────────────────── */
     #hero {
       min-height: 100vh;
@@ -154,7 +154,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     #hero::before {
       content: '';
       position: absolute;
@@ -164,7 +164,7 @@
       background: radial-gradient(circle, rgba(27,58,92,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
-
+ 
     #hero::after {
       content: '';
       position: absolute;
@@ -174,13 +174,13 @@
       background: radial-gradient(circle, rgba(13,110,110,0.04) 0%, transparent 70%);
       pointer-events: none;
     }
-
+ 
     .hero-left {
       opacity: 0;
       transform: translateY(24px);
       animation: fadeUp 1s ease forwards 0.1s;
     }
-
+ 
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -195,7 +195,7 @@
       background: rgba(13,110,110,0.08);
       border-radius: 980px;
     }
-
+ 
     .hero-name {
       font-family: var(--serif);
       font-size: clamp(52px, 5.5vw, 84px);
@@ -205,12 +205,12 @@
       color: var(--dark);
       margin-bottom: 28px;
     }
-
+ 
     .hero-name em {
       font-style: italic;
       color: var(--navy);
     }
-
+ 
     .hero-tagline {
       font-size: 17px;
       font-weight: 300;
@@ -219,11 +219,11 @@
       max-width: 460px;
       margin-bottom: 42px;
     }
-
+ 
     .hero-cta {
       display: flex; gap: 14px; flex-wrap: wrap;
     }
-
+ 
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--dark);
@@ -236,9 +236,9 @@
       transition: background 0.2s, transform 0.15s;
       letter-spacing: 0.02em;
     }
-
+ 
     .btn-primary:hover { background: #333; transform: scale(1.02); }
-
+ 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 8px;
       background: transparent;
@@ -252,9 +252,9 @@
       transition: background 0.2s, transform 0.15s;
       letter-spacing: 0.02em;
     }
-
+ 
     .btn-ghost:hover { background: rgba(27,58,92,0.06); transform: scale(1.02); }
-
+ 
     .hero-right {
       display: flex;
       flex-direction: column;
@@ -263,7 +263,7 @@
       transform: translateY(24px);
       animation: fadeUp 1s ease forwards 0.35s;
     }
-
+ 
     .hero-photo-wrap {
       width: 100%;
       aspect-ratio: 4/5;
@@ -272,13 +272,13 @@
       background: var(--smoke);
       position: relative;
     }
-
+ 
     .hero-photo-wrap img {
       width: 100%; height: 100%;
       object-fit: cover;
       object-position: center top;
     }
-
+ 
     .hero-photo-overlay {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -288,21 +288,21 @@
       flex-direction: column;
       gap: 4px;
     }
-
+ 
     .hero-photo-overlay span:first-child {
       font-family: var(--serif);
       font-size: 20px;
       color: var(--white);
       font-weight: 400;
     }
-
+ 
     .hero-photo-overlay span:last-child {
       font-size: 12px;
       color: rgba(255,255,255,0.65);
       font-weight: 300;
       letter-spacing: 0.04em;
     }
-
+ 
     .hero-stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -311,7 +311,7 @@
       border-radius: var(--radius);
       overflow: hidden;
     }
-
+ 
     .hero-stat {
       background: var(--white);
       padding: 18px 16px;
@@ -319,7 +319,7 @@
       flex-direction: column;
       gap: 3px;
     }
-
+ 
     .hero-stat-num {
       font-family: var(--serif);
       font-size: 26px;
@@ -327,7 +327,7 @@
       letter-spacing: -0.01em;
       line-height: 1;
     }
-
+ 
     .hero-stat-label {
       font-size: 11px;
       font-weight: 400;
@@ -335,12 +335,12 @@
       letter-spacing: 0.04em;
       line-height: 1.4;
     }
-
+ 
     /* ── SECTION BASE ────────────────────────────────────── */
     section { padding: 96px 24px; }
-
+ 
     .container { max-width: 1040px; margin: 0 auto; }
-
+ 
     .section-label {
       font-size: 11px;
       font-weight: 600;
@@ -349,7 +349,7 @@
       color: var(--teal);
       margin-bottom: 14px;
     }
-
+ 
     .section-title {
       font-family: var(--serif);
       font-size: clamp(34px, 4.5vw, 58px);
@@ -359,7 +359,7 @@
       color: var(--dark);
       margin-bottom: 20px;
     }
-
+ 
     .section-body {
       font-size: 16px;
       font-weight: 300;
@@ -367,10 +367,10 @@
       color: var(--mid);
       max-width: 620px;
     }
-
+ 
     /* ── ABOUT ───────────────────────────────────────────── */
     #about { background: var(--off); }
-
+ 
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -378,7 +378,7 @@
       align-items: start;
       margin-top: 20px;
     }
-
+ 
     .about-body p {
       font-size: 16px;
       font-weight: 300;
@@ -386,25 +386,25 @@
       color: #4a4845;
       margin-bottom: 18px;
     }
-
+ 
     .about-body p:last-child { margin-bottom: 0; }
-
+ 
     .about-highlights {
       margin-top: 32px;
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-
+ 
     .highlight-item {
       display: flex;
       gap: 16px;
       padding: 16px 0;
       border-bottom: 1px solid var(--smoke);
     }
-
+ 
     .highlight-item:first-child { border-top: 1px solid var(--smoke); }
-
+ 
     .highlight-icon {
       width: 36px; height: 36px;
       flex-shrink: 0;
@@ -414,11 +414,11 @@
       font-size: 16px;
       border: 1px solid var(--smoke);
     }
-
+ 
     .highlight-text {
       flex: 1;
     }
-
+ 
     .highlight-text strong {
       display: block;
       font-size: 14px;
@@ -426,14 +426,14 @@
       color: var(--dark);
       margin-bottom: 2px;
     }
-
+ 
     .highlight-text span {
       font-size: 13px;
       font-weight: 300;
       color: var(--mid);
       line-height: 1.5;
     }
-
+ 
     .about-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -445,13 +445,13 @@
       position: sticky;
       top: 80px;
     }
-
+ 
     .stat {
       background: var(--white);
       padding: 28px 22px;
       display: flex; flex-direction: column; gap: 6px;
     }
-
+ 
     .stat-num {
       font-family: var(--serif);
       font-size: 42px;
@@ -460,24 +460,24 @@
       line-height: 1;
       letter-spacing: -0.02em;
     }
-
+ 
     .stat-label {
       font-size: 12px;
       font-weight: 400;
       color: var(--mid);
       line-height: 1.4;
     }
-
+ 
     /* ── EXPERTISE PILLARS ───────────────────────────────── */
     #expertise { background: var(--white); }
-
+ 
     .pillars-grid {
       margin-top: 52px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
-
+ 
     .pillar-card {
       background: var(--off);
       border-radius: 18px;
@@ -488,13 +488,13 @@
       transition: transform 0.25s, box-shadow 0.25s;
       border: 1px solid transparent;
     }
-
+ 
     .pillar-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 40px rgba(0,0,0,0.07);
       border-color: var(--smoke);
     }
-
+ 
     .pillar-num {
       font-family: var(--serif);
       font-size: 36px;
@@ -502,26 +502,26 @@
       line-height: 1;
       font-weight: 400;
     }
-
+ 
     .pillar-icon {
       width: 44px; height: 44px;
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 20px;
     }
-
+ 
     .pillar-icon.pm   { background: rgba(27,58,92,0.1); }
     .pillar-icon.da   { background: rgba(37,99,235,0.1); }
     .pillar-icon.ss   { background: rgba(13,110,110,0.1); }
     .pillar-icon.dev  { background: rgba(184,134,11,0.1); }
-
+ 
     .pillar-title {
       font-size: 15px;
       font-weight: 600;
       color: var(--dark);
       letter-spacing: -0.01em;
     }
-
+ 
     .pillar-desc {
       font-size: 13px;
       font-weight: 300;
@@ -529,11 +529,11 @@
       line-height: 1.65;
       flex: 1;
     }
-
+ 
     .pillar-tags {
       display: flex; flex-wrap: wrap; gap: 6px;
     }
-
+ 
     .tag {
       font-size: 11px;
       font-weight: 500;
@@ -544,14 +544,14 @@
       letter-spacing: 0.02em;
       border: 1px solid var(--smoke);
     }
-
+ 
     /* ── PROJECT MANAGEMENT ──────────────────────────────── */
     #project-management { background: var(--navy); }
-
+ 
     #project-management .section-label { color: rgba(255,255,255,0.45); }
     #project-management .section-title { color: var(--white); }
     #project-management .section-body { color: rgba(255,255,255,0.5); }
-
+ 
     .pm-intro {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -559,7 +559,7 @@
       align-items: start;
       margin-bottom: 60px;
     }
-
+ 
     .pm-framework-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -569,15 +569,15 @@
       border-radius: 18px;
       overflow: hidden;
     }
-
+ 
     .pm-fw-card {
       background: rgba(255,255,255,0.04);
       padding: 26px 22px;
       transition: background 0.2s;
     }
-
+ 
     .pm-fw-card:hover { background: rgba(255,255,255,0.08); }
-
+ 
     .pm-fw-title {
       font-size: 14px;
       font-weight: 600;
@@ -585,21 +585,21 @@
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
-
+ 
     .pm-fw-desc {
       font-size: 12px;
       font-weight: 300;
       color: rgba(255,255,255,0.45);
       line-height: 1.6;
     }
-
+ 
     .pm-projects {
       margin-top: 60px;
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-
+ 
     .pm-project-item {
       display: grid;
       grid-template-columns: 200px 1fr auto;
@@ -608,9 +608,9 @@
       border-top: 1px solid rgba(255,255,255,0.08);
       align-items: start;
     }
-
+ 
     .pm-project-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
-
+ 
     .pm-proj-org {
       font-size: 12px;
       color: rgba(255,255,255,0.35);
@@ -618,7 +618,7 @@
       padding-top: 3px;
       letter-spacing: 0.04em;
     }
-
+ 
     .pm-proj-title {
       font-family: var(--serif);
       font-size: 20px;
@@ -628,7 +628,7 @@
       letter-spacing: -0.01em;
       line-height: 1.3;
     }
-
+ 
     .pm-proj-desc {
       font-size: 13px;
       font-weight: 300;
@@ -636,11 +636,11 @@
       line-height: 1.65;
       margin-bottom: 12px;
     }
-
+ 
     .pm-proj-badges {
       display: flex; flex-wrap: wrap; gap: 6px;
     }
-
+ 
     .pm-badge {
       font-size: 11px;
       font-weight: 500;
@@ -650,9 +650,9 @@
       border-radius: 980px;
       letter-spacing: 0.02em;
     }
-
+ 
     .pm-badge.accent { color: #7dd3fc; background: rgba(125,211,252,0.1); }
-
+ 
     .pm-outcome {
       display: flex;
       flex-direction: column;
@@ -660,7 +660,7 @@
       gap: 4px;
       padding-top: 3px;
     }
-
+ 
     .pm-outcome-num {
       font-family: var(--serif);
       font-size: 32px;
@@ -668,7 +668,7 @@
       line-height: 1;
       letter-spacing: -0.02em;
     }
-
+ 
     .pm-outcome-label {
       font-size: 11px;
       color: rgba(255,255,255,0.35);
@@ -677,10 +677,10 @@
       text-transform: uppercase;
       text-align: right;
     }
-
+ 
     /* ── DATA ANALYTICS ──────────────────────────────────── */
     #data-analytics { background: var(--off); }
-
+ 
     .analytics-layout {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -688,20 +688,20 @@
       align-items: start;
       margin-top: 20px;
     }
-
+ 
     .analytics-tools {
       margin-top: 32px;
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
-
+ 
     .tool-row {
       display: flex;
       align-items: center;
       gap: 14px;
     }
-
+ 
     .tool-name {
       font-size: 13px;
       font-weight: 500;
@@ -709,7 +709,7 @@
       width: 120px;
       flex-shrink: 0;
     }
-
+ 
     .tool-bar-bg {
       flex: 1;
       height: 4px;
@@ -717,14 +717,14 @@
       border-radius: 2px;
       overflow: hidden;
     }
-
+ 
     .tool-bar-fill {
       height: 100%;
       border-radius: 2px;
       background: var(--navy);
       transition: width 1s ease;
     }
-
+ 
     .tool-level {
       font-size: 11px;
       color: var(--mid);
@@ -733,14 +733,14 @@
       text-align: right;
       flex-shrink: 0;
     }
-
+ 
     .analytics-certbox {
       background: var(--white);
       border-radius: 18px;
       padding: 32px;
       border: 1px solid var(--smoke);
     }
-
+ 
     .certbox-title {
       font-size: 12px;
       font-weight: 600;
@@ -749,7 +749,7 @@
       color: var(--mid);
       margin-bottom: 20px;
     }
-
+ 
     .cert-item {
       display: flex;
       gap: 16px;
@@ -757,10 +757,10 @@
       border-bottom: 1px solid var(--smoke);
       align-items: flex-start;
     }
-
+ 
     .cert-item:first-of-type { border-top: 1px solid var(--smoke); }
     .cert-item:last-of-type { border-bottom: none; }
-
+ 
     .cert-badge {
       width: 42px; height: 42px;
       border-radius: 10px;
@@ -768,12 +768,12 @@
       font-size: 18px;
       flex-shrink: 0;
     }
-
+ 
     .cert-badge.google { background: rgba(66,133,244,0.1); }
     .cert-badge.pmi    { background: rgba(27,58,92,0.1); }
     .cert-badge.ucd    { background: rgba(13,110,110,0.1); }
     .cert-badge.mss    { background: rgba(184,134,11,0.1); }
-
+ 
     .cert-info strong {
       display: block;
       font-size: 14px;
@@ -781,21 +781,21 @@
       color: var(--dark);
       margin-bottom: 2px;
     }
-
+ 
     .cert-info span {
       font-size: 12px;
       font-weight: 300;
       color: var(--mid);
       line-height: 1.5;
     }
-
+ 
     .analytics-use-cases {
       margin-top: 28px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
-
+ 
     .use-case-card {
       background: var(--white);
       border: 1px solid var(--smoke);
@@ -803,34 +803,34 @@
       padding: 20px 18px;
       transition: border-color 0.2s;
     }
-
+ 
     .use-case-card:hover { border-color: var(--navy); }
-
+ 
     .use-case-icon { font-size: 20px; margin-bottom: 10px; }
-
+ 
     .use-case-title {
       font-size: 13px;
       font-weight: 600;
       color: var(--dark);
       margin-bottom: 6px;
     }
-
+ 
     .use-case-desc {
       font-size: 12px;
       font-weight: 300;
       color: var(--mid);
       line-height: 1.6;
     }
-
+ 
     /* ── EXPERIENCE ──────────────────────────────────────── */
     #experience { background: var(--white); }
-
+ 
     .timeline {
       margin-top: 52px;
       display: flex;
       flex-direction: column;
     }
-
+ 
     .timeline-item {
       display: grid;
       grid-template-columns: 200px 1fr;
@@ -839,9 +839,9 @@
       border-top: 1px solid var(--smoke);
       transition: background 0.2s;
     }
-
+ 
     .timeline-item:last-child { border-bottom: 1px solid var(--smoke); }
-
+ 
     .timeline-date {
       font-size: 13px;
       color: var(--mid);
@@ -849,7 +849,7 @@
       padding-top: 4px;
       line-height: 1.6;
     }
-
+ 
     .timeline-badge {
       display: inline-block;
       font-size: 10px;
@@ -860,11 +860,11 @@
       border-radius: 980px;
       margin-top: 8px;
     }
-
+ 
     .badge-current { background: rgba(13,110,110,0.1); color: var(--teal); }
     .badge-canada  { background: rgba(27,58,92,0.1); color: var(--navy); }
     .badge-intl    { background: rgba(138,136,130,0.1); color: var(--mid); }
-
+ 
     .timeline-role {
       font-size: 18px;
       font-weight: 500;
@@ -872,14 +872,14 @@
       margin-bottom: 4px;
       letter-spacing: -0.01em;
     }
-
+ 
     .timeline-org {
       font-size: 14px;
       color: var(--teal);
       font-weight: 400;
       margin-bottom: 14px;
     }
-
+ 
     .timeline-desc {
       font-size: 14px;
       font-weight: 300;
@@ -887,14 +887,14 @@
       line-height: 1.7;
       margin-bottom: 14px;
     }
-
+ 
     .timeline-bullets {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
+ 
     .timeline-bullets li {
       font-size: 13px;
       font-weight: 300;
@@ -903,7 +903,7 @@
       padding-left: 16px;
       position: relative;
     }
-
+ 
     .timeline-bullets li::before {
       content: '→';
       position: absolute;
@@ -911,10 +911,10 @@
       color: var(--teal);
       font-size: 12px;
     }
-
+ 
     /* ── RESEARCH & ACADEMICS ────────────────────────────── */
     #research { background: var(--cream); }
-
+ 
     .research-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -922,14 +922,14 @@
       align-items: start;
       margin-top: 20px;
     }
-
+ 
     .research-method-grid {
       margin-top: 28px;
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-
+ 
     .method-item {
       display: flex;
       gap: 16px;
@@ -937,9 +937,9 @@
       border-bottom: 1px solid var(--smoke);
       align-items: flex-start;
     }
-
+ 
     .method-item:first-child { border-top: 1px solid var(--smoke); }
-
+ 
     .method-num {
       font-family: var(--serif);
       font-size: 22px;
@@ -947,7 +947,7 @@
       min-width: 28px;
       padding-top: 2px;
     }
-
+ 
     .method-info strong {
       display: block;
       font-size: 14px;
@@ -955,18 +955,18 @@
       color: var(--dark);
       margin-bottom: 4px;
     }
-
+ 
     .method-info span {
       font-size: 13px;
       font-weight: 300;
       color: var(--mid);
       line-height: 1.5;
     }
-
+ 
     .research-areas {
       margin-top: 0;
     }
-
+ 
     .research-area-card {
       background: var(--white);
       border-radius: var(--radius);
@@ -975,12 +975,12 @@
       border-left: 3px solid var(--teal);
       transition: transform 0.2s;
     }
-
+ 
     .research-area-card:hover { transform: translateX(4px); }
-
+ 
     .research-area-card:nth-child(2) { border-left-color: var(--navy); }
     .research-area-card:nth-child(3) { border-left-color: var(--gold); }
-
+ 
     .ra-title {
       font-size: 15px;
       font-weight: 500;
@@ -988,24 +988,24 @@
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
-
+ 
     .ra-desc {
       font-size: 13px;
       font-weight: 300;
       color: var(--mid);
       line-height: 1.65;
     }
-
+ 
     /* ── EDUCATION ───────────────────────────────────────── */
     #education { background: var(--off); }
-
+ 
     .edu-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-top: 48px;
     }
-
+ 
     .edu-card {
       background: var(--white);
       border-radius: 18px;
@@ -1013,21 +1013,21 @@
       border: 1px solid var(--smoke);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
+ 
     .edu-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 36px rgba(0,0,0,0.07);
     }
-
+ 
     .edu-card-header {
       padding: 28px 24px 20px;
       border-bottom: 1px solid var(--smoke);
     }
-
+ 
     .edu-card-header-navy { background: var(--navy); }
     .edu-card-header-teal { background: var(--teal); }
     .edu-card-header-gold { background: #7c5e00; }
-
+ 
     .edu-degree {
       font-family: var(--serif);
       font-size: 20px;
@@ -1036,18 +1036,18 @@
       line-height: 1.2;
       margin-bottom: 4px;
     }
-
+ 
     .edu-school {
       font-size: 12px;
       font-weight: 400;
       color: rgba(255,255,255,0.65);
       letter-spacing: 0.04em;
     }
-
+ 
     .edu-card-body {
       padding: 20px 24px;
     }
-
+ 
     .edu-year {
       font-size: 12px;
       font-weight: 600;
@@ -1056,32 +1056,32 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-
+ 
     .edu-details {
       font-size: 13px;
       font-weight: 300;
       color: #5a5855;
       line-height: 1.65;
     }
-
+ 
     .edu-tags {
       display: flex; flex-wrap: wrap; gap: 6px;
       margin-top: 14px;
     }
-
+ 
     /* ── SKILLS ──────────────────────────────────────────── */
     #skills { background: var(--dark); }
-
+ 
     #skills .section-label { color: rgba(255,255,255,0.4); }
     #skills .section-title { color: var(--white); }
-
+ 
     .skills-header-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 52px;
     }
-
+ 
     .skills-all {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1091,17 +1091,17 @@
       border-radius: 18px;
       overflow: hidden;
     }
-
+ 
     .skill-card {
       background: #1a1917;
       padding: 28px 24px;
       transition: background 0.25s;
     }
-
+ 
     .skill-card:hover { background: #252320; }
-
+ 
     .skill-icon { font-size: 22px; margin-bottom: 14px; }
-
+ 
     .skill-title {
       font-size: 14px;
       font-weight: 600;
@@ -1109,7 +1109,7 @@
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
-
+ 
     .skill-desc {
       font-size: 12px;
       font-weight: 300;
@@ -1117,13 +1117,13 @@
       line-height: 1.65;
       margin-bottom: 14px;
     }
-
+ 
     .skill-items {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
     }
-
+ 
     .skill-item-tag {
       font-size: 10px;
       font-weight: 500;
@@ -1133,15 +1133,15 @@
       border-radius: 980px;
       letter-spacing: 0.03em;
     }
-
+ 
     /* ── PUBLICATIONS ────────────────────────────────────── */
     #publications { background: var(--off); }
-
+ 
     .pub-list {
       margin-top: 48px;
       display: flex; flex-direction: column; gap: 0;
     }
-
+ 
     .pub-item {
       display: flex;
       align-items: flex-start;
@@ -1152,46 +1152,46 @@
       transition: opacity 0.2s;
       cursor: default;
     }
-
+ 
     .pub-item.linked { cursor: pointer; }
     .pub-item:last-child { border-bottom: 1px solid var(--smoke); }
     .pub-item.linked:hover { opacity: 0.65; }
-
+ 
     .pub-year {
       font-size: 12px; color: var(--mid); font-weight: 400;
       min-width: 36px; letter-spacing: 0.04em; padding-top: 2px;
     }
-
+ 
     .pub-body { flex: 1; }
-
+ 
     .pub-title {
       font-size: 16px; font-weight: 400;
       color: var(--dark); line-height: 1.5; margin-bottom: 8px;
     }
-
+ 
     .pub-meta { display: flex; gap: 10px; flex-wrap: wrap; }
-
+ 
     .pub-badge {
       display: inline-flex; align-items: center; gap: 5px;
       font-size: 11px; font-weight: 500; letter-spacing: 0.04em;
       color: var(--mid); background: var(--smoke);
       padding: 3px 10px; border-radius: 980px;
     }
-
+ 
     .pub-badge.hot { color: var(--navy); background: rgba(27,58,92,0.1); }
-
+ 
     .pub-arrow { color: var(--teal); font-size: 16px; flex-shrink: 0; padding-top: 2px; }
-
+ 
     /* ── MEDIA ───────────────────────────────────────────── */
     #media { background: var(--white); }
-
+ 
     .media-grid {
       margin-top: 48px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
-
+ 
     .media-card {
       border: 1px solid var(--smoke);
       border-radius: 16px;
@@ -1201,44 +1201,44 @@
       transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
       display: flex; flex-direction: column; gap: 12px;
     }
-
+ 
     .media-card:hover {
       border-color: var(--dark);
       transform: translateY(-2px);
       box-shadow: 0 8px 28px rgba(0,0,0,0.06);
     }
-
+ 
     .media-outlet {
       font-size: 11px; font-weight: 600;
       letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--teal);
     }
-
+ 
     .media-headline {
       font-family: var(--serif);
       font-size: 19px; font-weight: 400;
       color: var(--dark); line-height: 1.35;
     }
-
+ 
     .media-desc {
       font-size: 13px; font-weight: 300;
       color: var(--mid); line-height: 1.65; flex: 1;
     }
-
+ 
     .media-date { font-size: 12px; color: var(--mid); margin-top: auto; }
-
+ 
     /* ── CONTACT ─────────────────────────────────────────── */
     #contact {
       background: var(--cream);
       text-align: center;
     }
-
+ 
     #contact .section-body { margin: 0 auto 48px; }
-
+ 
     .contact-links {
       display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
     }
-
+ 
     .contact-chip {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 13px; font-weight: 400;
@@ -1248,25 +1248,25 @@
       background: var(--white);
       transition: border-color 0.2s, transform 0.15s;
     }
-
+ 
     .contact-chip:hover { border-color: var(--dark); transform: scale(1.02); }
-
+ 
     /* ── FOOTER ──────────────────────────────────────────── */
     footer {
       background: var(--dark);
       padding: 28px 52px;
       display: flex; align-items: center; justify-content: space-between;
     }
-
+ 
     footer p { font-size: 12px; color: rgba(255,255,255,0.35); }
-
+ 
     footer a {
       color: rgba(255,255,255,0.45); text-decoration: none;
       font-size: 12px; transition: color 0.2s;
     }
-
+ 
     footer a:hover { color: var(--white); }
-
+ 
     /* ── DIVIDER ─────────────────────────────────────────── */
     .ornament-divider {
       text-align: center;
@@ -1276,7 +1276,7 @@
       gap: 16px;
       max-width: 400px;
     }
-
+ 
     .ornament-divider::before,
     .ornament-divider::after {
       content: '';
@@ -1284,84 +1284,84 @@
       height: 1px;
       background: var(--smoke);
     }
-
+ 
     .ornament-divider span {
       font-family: var(--serif);
       font-size: 18px;
       color: var(--smoke);
       font-style: italic;
     }
-
+ 
     /* ── ANIMATIONS ──────────────────────────────────────── */
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
-
+ 
     .reveal {
       opacity: 1;
       transform: translateY(0);
       transition: opacity 0.75s ease, transform 0.75s ease;
     }
-
+ 
     .js-loaded .reveal {
       opacity: 0;
       transform: translateY(28px);
     }
-
+ 
     .js-loaded .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
+ 
     /* ── RESPONSIVE ──────────────────────────────────────── */
     @media (max-width: 1024px) {
       .pillars-grid { grid-template-columns: repeat(2, 1fr); }
       .pm-framework-grid { grid-template-columns: repeat(2, 1fr); }
       .edu-grid { grid-template-columns: 1fr 1fr; }
     }
-
+ 
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-
+ 
       #hero {
         grid-template-columns: 1fr;
         padding: 90px 24px 60px;
         gap: 40px;
       }
-
+ 
       .hero-right { display: none; }
-
+ 
       .about-grid,
       .analytics-layout,
       .research-layout,
       .pm-intro { grid-template-columns: 1fr; gap: 40px; }
-
+ 
       .timeline-item { grid-template-columns: 1fr; gap: 8px; }
-
+ 
       .pm-project-item {
         grid-template-columns: 1fr;
         gap: 12px;
       }
-
+ 
       .pm-outcome { align-items: flex-start; }
-
+ 
       .pillars-grid { grid-template-columns: 1fr; }
       .skills-all { grid-template-columns: 1fr 1fr; }
       .media-grid { grid-template-columns: 1fr; }
       .edu-grid { grid-template-columns: 1fr; }
       .analytics-use-cases { grid-template-columns: 1fr; }
-
+ 
       section { padding: 64px 20px; }
       footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px 20px; }
     }
-
+ 
     @media (max-width: 480px) {
       .skills-all { grid-template-columns: 1fr; }
       .hero-stats-row { grid-template-columns: repeat(3, 1fr); }
     }
-
+ 
     /* ── SCROLL PROGRESS BAR ─────────────────────────────── */
     #scroll-progress {
       position: fixed;
@@ -1372,7 +1372,7 @@
       z-index: 200;
       transition: width 0.1s linear;
     }
-
+ 
     /* ── BACK TO TOP ─────────────────────────────────────── */
     #back-to-top {
       position: fixed;
@@ -1393,7 +1393,7 @@
     }
     #back-to-top.visible { opacity: 1; transform: translateY(0); }
     #back-to-top:hover { background: var(--teal); }
-
+ 
     /* ── FEATURED BANNER ─────────────────────────────────── */
     .featured-banner {
       background: linear-gradient(135deg, #f0f7f4 0%, #e8f0f8 100%);
@@ -1442,7 +1442,7 @@
       color: var(--navy);
       flex-shrink: 0;
     }
-
+ 
     /* ── CONTACT FORM ────────────────────────────────────── */
     .contact-form-wrap {
       max-width: 560px;
@@ -1538,7 +1538,7 @@
       .featured-banner-arrow { display: none; }
       #back-to-top { bottom: 20px; right: 20px; }
     }
-
+ 
     /* ── COPY EMAIL TOAST ────────────────────────────────── */
     #copy-toast {
       position: fixed;
@@ -1558,16 +1558,16 @@
   </style>
 </head>
 <body>
-
+ 
   <!-- SCROLL PROGRESS -->
   <div id="scroll-progress"></div>
-
+ 
   <!-- BACK TO TOP -->
   <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
+ 
   <!-- COPY TOAST -->
   <div id="copy-toast">✓ Email copied!</div>
-
+ 
   <!-- NAV -->
   <nav>
     <a href="#hero" class="nav-name">Rifat Islam Rupok</a>
@@ -1586,7 +1586,7 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-
+ 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="closeMobile()">About</a>
@@ -1599,7 +1599,7 @@
     <a href="#publications" onclick="closeMobile()">Publications</a>
     <a href="#contact" onclick="closeMobile()">Contact</a>
   </div>
-
+ 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
@@ -1623,12 +1623,12 @@
         <div>
           <div class="featured-banner-label">Featured Research · SSRN</div>
           <div class="featured-banner-title">India-Bangladesh Relations: A Comprehensive Analysis</div>
-          <div class="featured-banner-meta">3,089 abstract views · 257 downloads · Apr 2025</div>
+          <div class="featured-banner-meta">3,329+ abstract views · 370+ downloads · Apr 2025</div>
         </div>
         <div class="featured-banner-arrow">↗</div>
       </a>
     </div>
-
+ 
     <div class="hero-right">
       <div class="hero-photo-wrap">
         <img src="photo.jpg" alt="Rifat Islam Rupok" />
@@ -1647,13 +1647,13 @@
           <span class="hero-stat-label">Success Rate</span>
         </div>
         <div class="hero-stat">
-          <span class="hero-stat-num">3K+</span>
+          <span class="hero-stat-num">3.3K+</span>
           <span class="hero-stat-label">Research Views</span>
         </div>
       </div>
     </div>
   </section>
-
+ 
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
@@ -1661,7 +1661,7 @@
         <div>
           <p class="section-label reveal">About</p>
           <h2 class="section-title reveal">Driven by<br><em style="font-style:italic;font-family:var(--serif)">evidence<br>&amp; purpose.</em></h2>
-
+ 
           <div class="about-body reveal">
             <p>
               With 5+ years of progressive experience spanning fundraising, grant management,
@@ -1681,7 +1681,7 @@
               strategic planning.
             </p>
           </div>
-
+ 
           <div class="about-highlights reveal">
             <div class="highlight-item">
               <div class="highlight-icon">🎓</div>
@@ -1713,7 +1713,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="about-stats reveal">
           <div class="stat">
             <span class="stat-num">$17M+</span>
@@ -1732,7 +1732,7 @@
             <span class="stat-label">Publications & working papers</span>
           </div>
           <div class="stat">
-            <span class="stat-num">3,089</span>
+            <span class="stat-num">3,329+</span>
             <span class="stat-label">SSRN abstract views (IBDR paper)</span>
           </div>
           <div class="stat">
@@ -1743,13 +1743,13 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- EXPERTISE PILLARS -->
   <section id="expertise">
     <div class="container">
       <p class="section-label reveal">Core Expertise</p>
       <h2 class="section-title reveal">Four pillars of<br>professional practice.</h2>
-
+ 
       <div class="pillars-grid reveal">
         <div class="pillar-card">
           <div class="pillar-num">01</div>
@@ -1769,7 +1769,7 @@
             <span class="tag">Gantt / CPM</span>
           </div>
         </div>
-
+ 
         <div class="pillar-card">
           <div class="pillar-num">02</div>
           <div class="pillar-icon da">📊</div>
@@ -1789,7 +1789,7 @@
             <span class="tag">Excel / Power BI</span>
           </div>
         </div>
-
+ 
         <div class="pillar-card">
           <div class="pillar-num">03</div>
           <div class="pillar-icon ss">🔬</div>
@@ -1808,7 +1808,7 @@
             <span class="tag">Conflict Studies</span>
           </div>
         </div>
-
+ 
         <div class="pillar-card">
           <div class="pillar-num">04</div>
           <div class="pillar-icon dev">🤝</div>
@@ -1830,7 +1830,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- PROJECT MANAGEMENT -->
   <section id="project-management">
     <div class="container">
@@ -1845,7 +1845,7 @@
             results-based reporting.
           </p>
         </div>
-
+ 
         <div class="pm-framework-grid reveal">
           <div class="pm-fw-card">
             <div class="pm-fw-title">Initiation & Scoping</div>
@@ -1873,11 +1873,11 @@
           </div>
         </div>
       </div>
-
+ 
       <h3 style="font-family:var(--serif);font-size:28px;font-weight:400;color:rgba(255,255,255,0.7);margin-bottom:8px;letter-spacing:-0.01em;" class="reveal">Selected Project Leadership</h3>
-
+ 
       <div class="pm-projects">
-
+ 
         <div class="pm-project-item reveal">
           <div class="pm-proj-org">Siloam Mission · 2023–Present</div>
           <div>
@@ -1902,7 +1902,7 @@
             <span class="pm-outcome-label">Managed</span>
           </div>
         </div>
-
+ 
         <div class="pm-project-item reveal">
           <div class="pm-proj-org">Siloam Mission · 2024–2025</div>
           <div>
@@ -1925,7 +1925,7 @@
             <span class="pm-outcome-label">Published</span>
           </div>
         </div>
-
+ 
         <div class="pm-project-item reveal">
           <div class="pm-proj-org">Beyond Peace · 2020–2023</div>
           <div>
@@ -1948,7 +1948,7 @@
             <span class="pm-outcome-label">Research<br>Staff Led</span>
           </div>
         </div>
-
+ 
         <div class="pm-project-item reveal">
           <div class="pm-proj-org">Manitoba Métis Federation · 2023</div>
           <div>
@@ -1970,17 +1970,17 @@
             <span class="pm-outcome-label">Delivered<br>on time</span>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <!-- DATA ANALYTICS -->
   <section id="data-analytics">
     <div class="container">
       <p class="section-label reveal">Data Analytics</p>
       <h2 class="section-title reveal">Turning data into<br>decisions.</h2>
-
+ 
       <div class="analytics-layout">
         <div>
           <p class="section-body reveal">
@@ -1989,7 +1989,7 @@
             the full data workflow — collection design, cleaning, analysis, and visualisation — to
             surface actionable insights for funders, leadership, and community partners.
           </p>
-
+ 
           <div class="analytics-tools reveal">
             <div class="tool-row">
               <span class="tool-name">Python / Pandas</span>
@@ -2028,7 +2028,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div>
           <div class="analytics-certbox reveal">
             <div class="certbox-title">Certifications &amp; Qualifications</div>
@@ -2061,7 +2061,7 @@
               </div>
             </div>
           </div>
-
+ 
           <div class="analytics-use-cases reveal">
             <div class="use-case-card">
               <div class="use-case-icon">💰</div>
@@ -2088,15 +2088,15 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <p class="section-label reveal">Experience</p>
       <h2 class="section-title reveal">Where I've worked.</h2>
-
+ 
       <div class="timeline">
-
+ 
         <div class="timeline-item reveal">
           <div class="timeline-date">
             Jun 2023 – Present<br>Winnipeg, MB
@@ -2123,7 +2123,7 @@
             </ul>
           </div>
         </div>
-
+ 
         <div class="timeline-item reveal">
           <div class="timeline-date">
             Apr – May 2023<br>Winnipeg, MB
@@ -2144,7 +2144,7 @@
             </ul>
           </div>
         </div>
-
+ 
         <div class="timeline-item reveal">
           <div class="timeline-date">
             Oct 2020 – Apr 2023<br>Dhaka, Bangladesh
@@ -2168,7 +2168,7 @@
             </ul>
           </div>
         </div>
-
+ 
         <div class="timeline-item reveal">
           <div class="timeline-date">
             Dec 2020 – Dec 2021<br>Dhaka, Bangladesh
@@ -2191,7 +2191,7 @@
             </ul>
           </div>
         </div>
-
+ 
         <div class="timeline-item reveal">
           <div class="timeline-date">
             Jan – Nov 2020<br>Dhaka, Bangladesh
@@ -2212,7 +2212,7 @@
             </ul>
           </div>
         </div>
-
+ 
         <div class="timeline-item reveal">
           <div class="timeline-date">
             Jan 2018 – Dec 2019<br>Dhaka, Bangladesh
@@ -2233,17 +2233,17 @@
             </ul>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <!-- RESEARCH & ACADEMICS -->
   <section id="research">
     <div class="container">
       <p class="section-label reveal">Research & Academics</p>
       <h2 class="section-title reveal">Rigorous inquiry,<br>real-world impact.</h2>
-
+ 
       <div class="research-layout">
         <div>
           <p class="section-body reveal">
@@ -2252,7 +2252,7 @@
             not only to academic publication, but to grant writing, programme evaluation, donor
             communications, and policy advocacy — bringing scholarly rigour to practical development work.
           </p>
-
+ 
           <div class="research-method-grid reveal">
             <div class="method-item">
               <div class="method-num">01</div>
@@ -2291,7 +2291,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="research-areas reveal">
           <div class="research-area-card">
             <div class="ra-title">🌏 South Asian Geopolitics & Security</div>
@@ -2301,17 +2301,17 @@
               on SSRN with 62 abstract views (2025).
             </div>
           </div>
-
+ 
           <div class="research-area-card">
             <div class="ra-title">🇧🇩 India-Bangladesh Relations</div>
             <div class="ra-desc">
               Comprehensive analysis of diplomatic, economic, and security dimensions of bilateral
               India-Bangladesh relations following the 2024 political transition. Most-viewed work
-              with 3,089 SSRN abstract views and 257 downloads globally. Cited by scholars and
+              with 3,329+ SSRN abstract views and 370+ downloads globally. Cited by scholars and
               policy analysts across South Asia, Europe, and North America.
             </div>
           </div>
-
+ 
           <div class="research-area-card">
             <div class="ra-title">📱 Digital Media & Collective Violence</div>
             <div class="ra-desc">
@@ -2321,7 +2321,7 @@
               affordance theory in conflict contexts.
             </div>
           </div>
-
+ 
           <div class="research-area-card" style="border-left-color: var(--navy);">
             <div class="ra-title">🏠 Housing, Homelessness & Urban Policy</div>
             <div class="ra-desc">
@@ -2331,7 +2331,7 @@
               Free Press (2025).
             </div>
           </div>
-
+ 
           <div class="research-area-card" style="border-left-color: var(--gold);">
             <div class="ra-title">🎓 Education Access & Technology Equity</div>
             <div class="ra-desc">
@@ -2345,15 +2345,15 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- EDUCATION -->
   <section id="education">
     <div class="container">
       <p class="section-label reveal">Education & Credentials</p>
       <h2 class="section-title reveal">Built to think,<br>trained to deliver.</h2>
-
+ 
       <div class="edu-grid">
-
+ 
         <div class="edu-card reveal">
           <div class="edu-card-header edu-card-header-navy">
             <div class="edu-degree">Master of Social Science<br>Peace &amp; Conflict Studies</div>
@@ -2374,7 +2374,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="edu-card reveal">
           <div class="edu-card-header edu-card-header-teal">
             <div class="edu-degree">Fundraising &amp; Development Foundations</div>
@@ -2395,7 +2395,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="edu-card reveal">
           <div class="edu-card-header edu-card-header-gold">
             <div class="edu-degree">Google Data Analytics Professional Certificate</div>
@@ -2417,7 +2417,7 @@
             </div>
           </div>
         </div>
-
+ 
         <div class="edu-card reveal" style="grid-column: span 2;">
           <div class="edu-card-header" style="background: #2d2d2b;">
             <div class="edu-degree">PMI Project Management Certification</div>
@@ -2441,11 +2441,11 @@
             </div>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
@@ -2455,7 +2455,7 @@
           <h2 class="section-title reveal">Full-spectrum<br>professional toolkit.</h2>
         </div>
       </div>
-
+ 
       <div class="skills-all reveal">
         <div class="skill-card">
           <div class="skill-icon">💰</div>
@@ -2560,15 +2560,15 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="container">
       <p class="section-label reveal">Writing</p>
       <h2 class="section-title reveal">Publications &amp;<br>public scholarship.</h2>
-
+ 
       <div class="pub-list">
-
+ 
         <a href="https://doi.org/10.2139/ssrn.5557040" target="_blank" class="pub-item linked reveal">
           <span class="pub-year">2025</span>
           <div class="pub-body">
@@ -2582,21 +2582,21 @@
           </div>
           <span class="pub-arrow">↗</span>
         </a>
-
+ 
         <a href="https://doi.org/10.2139/ssrn.5230684" target="_blank" class="pub-item linked reveal">
           <span class="pub-year">2025</span>
           <div class="pub-body">
             <div class="pub-title">Recent Developments in India-Bangladesh Relations: A Comprehensive Analysis — <em>SSRN Working Paper</em></div>
             <div class="pub-meta">
               <span class="pub-badge hot">Apr 2025</span>
-              <span class="pub-badge hot">3,089 abstract views</span>
-              <span class="pub-badge hot">257 downloads</span>
+              <span class="pub-badge hot">3,329+ abstract views</span>
+              <span class="pub-badge hot">370+ downloads</span>
               <span class="pub-badge">South Asia · Diplomacy</span>
             </div>
           </div>
           <span class="pub-arrow">↗</span>
         </a>
-
+ 
         <div class="pub-item reveal">
           <span class="pub-year">2021</span>
           <div class="pub-body">
@@ -2609,7 +2609,7 @@
           </div>
           <span class="pub-arrow" style="opacity:0">↗</span>
         </div>
-
+ 
         <div class="pub-item reveal">
           <span class="pub-year">2018</span>
           <div class="pub-body">
@@ -2622,7 +2622,7 @@
           </div>
           <span class="pub-arrow" style="opacity:0">↗</span>
         </div>
-
+ 
         <div class="pub-item reveal">
           <span class="pub-year">2025</span>
           <div class="pub-body">
@@ -2635,19 +2635,19 @@
           </div>
           <span class="pub-arrow" style="opacity:0">↗</span>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <!-- MEDIA -->
   <section id="media">
     <div class="container">
       <p class="section-label reveal">In the News</p>
       <h2 class="section-title reveal">Media &amp;<br>public presence.</h2>
-
+ 
       <div class="media-grid">
-
+ 
         <div class="media-card reveal">
           <div class="media-outlet">Winnipeg Free Press</div>
           <div class="media-headline">Housing Equity & Urban Policy — Letters to the Editor</div>
@@ -2658,18 +2658,18 @@
           </div>
           <div class="media-date">2025</div>
         </div>
-
+ 
         <div class="media-card reveal">
           <div class="media-outlet">SSRN — Social Science Research Network</div>
           <div class="media-headline">India-Bangladesh Relations Paper: 3,000+ International Readers</div>
           <div class="media-desc">
             "Recent Developments in India-Bangladesh Relations: A Comprehensive Analysis" attracted
-            3,089 abstract views and 257 downloads globally since April 2025 — reaching scholars,
+            3,329+ abstract views and 370+ downloads globally since April 2025 — reaching scholars,
             policy analysts, and practitioners across South Asia, Europe, and North America.
           </div>
           <div class="media-date">April 2025 · ssrn.com</div>
         </div>
-
+ 
         <div class="media-card reveal">
           <div class="media-outlet">Beyond Peace — Research Publication</div>
           <div class="media-headline">COVID-19 & Education Access in Dhaka's Korail Slum</div>
@@ -2680,7 +2680,7 @@
           </div>
           <div class="media-date">2021 · beyond-peace.com</div>
         </div>
-
+ 
         <div class="media-card reveal">
           <div class="media-outlet">University of Dhaka — Podcast & Commentary</div>
           <div class="media-headline">Bengali-Language Podcast on Geopolitics & Current Affairs — 14 Episodes</div>
@@ -2695,11 +2695,11 @@
             <a href="https://www.youtube.com" target="_blank" style="font-size:12px;color:var(--teal);text-decoration:none;border:1px solid var(--smoke);padding:3px 10px;border-radius:980px;">↗ YouTube</a>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
@@ -2709,7 +2709,7 @@
         Open to conversations about development roles, research collaborations,
         data analytics projects, and community initiatives in Winnipeg and beyond.
       </p>
-
+ 
       <!-- Contact Form -->
       <div class="contact-form-wrap reveal">
         <h3>Send a message</h3>
@@ -2744,7 +2744,7 @@
         </form>
         <div class="cf-divider">— or reach me directly —</div>
       </div>
-
+ 
       <div class="contact-links reveal">
         <a href="mailto:contact@rupokri.ca" class="contact-chip" id="email-chip" title="Click to copy email">
           ✉ contact@rupokri.ca
@@ -2764,16 +2764,16 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Rifat Islam Rupok — Winnipeg, Manitoba</p>
     <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
       <p id="current-date"></p>
-      <p>Last updated: March 11, 2026</p>
+      <p>Last updated: May 13, 2026</p>
     </div>
   </footer>
-
+ 
   <script>
     // ── Scroll progress bar ────────────────────────────────
     const progressBar = document.getElementById('scroll-progress');
@@ -2786,7 +2786,7 @@
       if (scrollTop > 400) { backToTop.classList.add('visible'); }
       else { backToTop.classList.remove('visible'); }
     });
-
+ 
     // ── Copy email to clipboard ────────────────────────────
     const emailChip = document.getElementById('email-chip');
     const copyToast = document.getElementById('copy-toast');
@@ -2799,7 +2799,7 @@
         });
       });
     }
-
+ 
     // ── Contact form (Formspree) ───────────────────────────
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -2828,7 +2828,7 @@
         }
       });
     }
-
+ 
     // ── Live current date ──────────────────────────────────
     function updateDate() {
       const now = new Date();
@@ -2838,27 +2838,27 @@
     }
     updateDate();
     setInterval(updateDate, 60000);
-
+ 
     // ── Hamburger menu ────────────────────────────────────
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-
+ 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
-
+ 
     function closeMobile() {
       hamburger.classList.remove('open');
       mobileMenu.classList.remove('open');
     }
-
+ 
     // ── Scroll reveal ──────────────────────────────────────
     // Mark body so CSS knows JS is active (reveals start hidden only when JS runs)
     document.body.classList.add('js-loaded');
-
+ 
     const reveals = document.querySelectorAll('.reveal');
-
+ 
     if (!('IntersectionObserver' in window)) {
       // Fallback for old browsers: show everything immediately
       reveals.forEach(el => el.classList.add('visible'));
@@ -2871,19 +2871,19 @@
           }
         });
       }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
-
+ 
       reveals.forEach(el => observer.observe(el));
-
+ 
       // Hard fallback: force-show anything still hidden after 1.5s
       setTimeout(() => {
         reveals.forEach(el => el.classList.add('visible'));
       }, 1500);
     }
-
+ 
     // ── Active nav link ────────────────────────────────────
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
-
+ 
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
@@ -2899,7 +2899,8 @@
         }
       });
     });
-
+ 
   </script>
 </body>
 </html>
+ 
