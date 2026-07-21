@@ -12,6 +12,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://rupokri.ca/" />
   <link rel="sitemap" type="application/xml" href="https://rupokri.ca/sitemap.xml" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- ── Open Graph (LinkedIn, WhatsApp, Slack, Facebook) ── -->
   <meta property="og:type"         content="website" />
@@ -40,7 +43,7 @@
     "url": "https://rupokri.ca/",
     "image": "https://rupokri.ca/photo.jpg",
     "jobTitle": "Development Coordinator",
-    "worksFor": { "@type": "Organization", "name": "Siloam Mission" },
+    "worksFor": { "@type": "Organization", "name": "Siloam Mission", "url": "https://www.siloam.ca" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "University of Dhaka" },
       { "@type": "CollegeOrUniversity", "name": "UC Davis Continuing and Professional Education" }
@@ -91,7 +94,7 @@
     ::selection { background: rgba(226,168,78,0.3); color: #fff; }
 
     /* ── BACKGROUND ──────────────────────────────────────── */
-    #star-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    #scene-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
     .vignette {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(ellipse 120% 90% at 50% 10%, transparent 50%, rgba(0,0,0,0.55));
@@ -349,9 +352,9 @@
       border: 1px solid var(--line-soft);
       background: rgba(255,255,255,0.022);
       padding: 24px 24px;
-      transition: border-color 0.25s, background 0.25s;
+      transition: border-color 0.25s, background 0.25s, transform 0.3s;
     }
-    .panel:hover { border-color: var(--line); background: rgba(255,255,255,0.04); }
+    .panel:hover { border-color: var(--line); background: rgba(255,255,255,0.04); transform: perspective(900px) rotateX(1.2deg) rotateY(-1.2deg) translateY(-2px); }
     .panel-title { font-size: 14.5px; font-weight: 600; color: var(--txt); margin-bottom: 8px; letter-spacing: -0.01em; }
     .panel-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
     .panel-desc { font-size: 12.5px; font-weight: 300; color: var(--dim); line-height: 1.7; }
@@ -386,15 +389,6 @@
       border-bottom: 1px solid var(--line-soft);
       position: relative;
       overflow: hidden;
-    }
-    #globe-canvas {
-      position: absolute;
-      top: 50%; right: -6vw;
-      transform: translateY(-56%);
-      width: min(58vw, 880px);
-      height: min(58vw, 880px);
-      pointer-events: none;
-      opacity: 0.9;
     }
     .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; }
 
@@ -528,7 +522,7 @@
       display: flex; flex-direction: column; gap: 12px;
       transition: border-color 0.25s, background 0.25s, transform 0.25s;
     }
-    .hp-card:hover { border-color: rgba(226,168,78,0.4); background: rgba(255,255,255,0.04); transform: translateY(-3px); }
+    .hp-card:hover { border-color: rgba(226,168,78,0.4); background: rgba(255,255,255,0.04); transform: perspective(900px) rotateX(1deg) rotateY(1deg) translateY(-3px); }
     .hp-meta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); }
     .hp-title { font-size: clamp(16px, 1.6vw, 19px); font-weight: 600; line-height: 1.4; color: var(--txt); letter-spacing: -0.01em; flex: 1; }
     .hp-stats { font-family: var(--mono); font-size: 11px; color: var(--faint); letter-spacing: 0.04em; }
@@ -685,7 +679,6 @@
     }
 
     @media (max-width: 760px) {
-      #globe-canvas { top: 16%; right: -34vw; width: 120vw; height: 120vw; opacity: 0.45; transform: none; }
       #hero { padding-bottom: 90px; }
       .hero-facts { gap: 24px; }
       .chapter { padding-top: 96px; padding-bottom: 72px; min-height: auto; }
@@ -709,7 +702,7 @@
 </head>
 <body>
 
-  <canvas id="star-canvas"></canvas>
+  <canvas id="scene-canvas" aria-hidden="true"></canvas>
   <div class="vignette"></div>
   <div id="scroll-progress"></div>
 
@@ -750,7 +743,6 @@
 
   <!-- ════════ HERO ════════ -->
   <section id="hero">
-    <canvas id="globe-canvas" aria-hidden="true"></canvas>
     <div class="hero-inner">
       <p class="hero-kicker hero-anim">Winnipeg, Manitoba · Canada</p>
       <h1 class="hero-anim d1">Rifat<br>Islam<br>Rupok</h1>
@@ -796,14 +788,14 @@
           <p class="kicker reveal"><span class="idx">01</span> The Mission</p>
           <h2 class="reveal">Evidence &amp; purpose.</h2>
           <p class="lede reveal">
-            <strong>Development Coordinator at Siloam Mission</strong> — Winnipeg's largest shelter
+            <strong>Development Coordinator at <a href="https://www.siloam.ca" target="_blank" rel="noopener">Siloam Mission</a></strong> — Winnipeg's largest shelter
             and housing programme for Indigenous and marginalized peoples. I manage a
             $17M+ grant portfolio across 23+ federal, provincial, and municipal funding
             agreements, pairing research rigour with data-driven strategy.
           </p>
 
           <div class="facts reveal">
-            <div class="fact"><span class="fact-num" data-count="23" data-suffix="+">23+</span><span class="fact-label">Active Agreements</span></div>
+            <div class="fact"><span class="fact-num" data-count="17" data-prefix="$" data-suffix="M+">$17M+</span><span class="fact-label">Grant Portfolio</span></div>
             <div class="fact"><span class="fact-num">0</span><span class="fact-label">Missed Deadlines</span></div>
             <div class="fact"><span class="fact-num" data-count="9">9</span><span class="fact-label">Certifications</span></div>
             <div class="fact"><span class="fact-num" data-count="2">2</span><span class="fact-label">Continents Worked</span></div>
@@ -827,7 +819,8 @@
                 equity-centred approach to development work across Canada and South Asia.
               </p>
               <p>
-                Based in Winnipeg, I serve as Development Coordinator at Siloam Mission, where I
+                Based in Winnipeg, I serve as Development Coordinator at
+                <a href="https://www.siloam.ca" target="_blank" rel="noopener">Siloam Mission</a>, where I
                 manage a portfolio of $17M+ across 23+ active federal, provincial, and municipal
                 funding agreements, maintain relationships with major donors and institutional
                 partners, and coordinate housing and shelter programs serving Indigenous and
@@ -846,15 +839,14 @@
           <p class="block-title">Four Pillars of Practice</p>
           <div class="grid-2">
             <div class="panel">
-              <p class="panel-sub">01 · PMI Trained</p>
-              <p class="panel-title">Project Management</p>
+              <p class="panel-sub">01 · UC Davis Certified</p>
+              <p class="panel-title">Fundraising &amp; Development</p>
               <p class="panel-desc">
-                Coordinating multi-stakeholder, multi-stream programmes from initiation through
-                close-out. Proficient in Agile and traditional waterfall approaches, stakeholder
-                mapping, risk registers, and Gantt-based scheduling — applied across housing
-                programmes, grant-funded initiatives, and research projects.
+                Full-spectrum understanding of the development function: donor cultivation and
+                stewardship, major gift strategy, grant writing across government and foundation
+                streams, case development, and donor impact reporting.
               </p>
-              <div class="tags"><span class="tag">Agile</span><span class="tag">Risk Management</span><span class="tag">Stakeholder Engagement</span><span class="tag">Gantt / CPM</span></div>
+              <div class="tags"><span class="tag">Major Gifts</span><span class="tag">Grant Writing</span><span class="tag">Donor Stewardship</span><span class="tag">Case Development</span></div>
             </div>
             <div class="panel">
               <p class="panel-sub">02 · Google Certified</p>
@@ -878,14 +870,15 @@
               <div class="tags"><span class="tag">Qualitative Methods</span><span class="tag">Survey Design</span><span class="tag">Thematic Analysis</span><span class="tag">Policy Research</span><span class="tag">Conflict Studies</span></div>
             </div>
             <div class="panel">
-              <p class="panel-sub">04 · UC Davis Certified</p>
-              <p class="panel-title">Fundraising &amp; Development</p>
+              <p class="panel-sub">04 · PMI Trained</p>
+              <p class="panel-title">Project Management</p>
               <p class="panel-desc">
-                Full-spectrum understanding of the development function: donor cultivation and
-                stewardship, major gift strategy, grant writing across government and foundation
-                streams, case development, and donor impact reporting.
+                Coordinating multi-stakeholder, multi-stream programmes from initiation through
+                close-out. Proficient in Agile and traditional waterfall approaches, stakeholder
+                mapping, risk registers, and Gantt-based scheduling — applied across housing
+                programmes, grant-funded initiatives, and research projects.
               </p>
-              <div class="tags"><span class="tag">Major Gifts</span><span class="tag">Grant Writing</span><span class="tag">Donor Stewardship</span><span class="tag">Case Development</span></div>
+              <div class="tags"><span class="tag">Agile</span><span class="tag">Risk Management</span><span class="tag">Stakeholder Engagement</span><span class="tag">Gantt / CPM</span></div>
             </div>
           </div>
 
@@ -898,10 +891,11 @@
   <section class="chapter" id="portfolio">
     <div class="chapter-inner">
       <p class="kicker reveal"><span class="idx">02</span> The Portfolio</p>
-      <h2 class="reveal">$17M+ under management.</h2>
+      <h2 class="reveal">$17M+ secured &amp; managed.</h2>
       <p class="lede reveal">
-        PMI-trained, with demonstrated experience leading complex multi-funder
-        programmes simultaneously — <strong>zero missed deadlines</strong> across CMHC, PHAC,
+        Full-lifecycle grants management — prospecting, writing, compliance, and
+        funder reporting — across complex multi-funder programmes, with a 78%+
+        application success rate and <strong>zero missed deadlines</strong> across CMHC, PHAC,
         MB Housing, City of Winnipeg, and private foundation streams.
       </p>
 
@@ -1325,9 +1319,9 @@
 
       <div class="facts reveal">
         <div class="fact"><span class="fact-num">MSS</span><span class="fact-label">University of Dhaka</span></div>
-        <div class="fact"><span class="fact-num">PMI</span><span class="fact-label">Project Management</span></div>
         <div class="fact"><span class="fact-num">Google</span><span class="fact-label">Data Analytics</span></div>
         <div class="fact"><span class="fact-num">UC Davis</span><span class="fact-label">Fundraising</span></div>
+        <div class="fact"><span class="fact-num">SSRN</span><span class="fact-label">Indexed Research</span></div>
       </div>
 
       <details class="more reveal">
@@ -1357,16 +1351,6 @@
               <div class="tags"><span class="tag">Social Research</span><span class="tag">Political Science</span><span class="tag">Development Studies</span></div>
             </div>
             <div class="panel">
-              <p class="panel-sub">Professional Development · 2024</p>
-              <p class="panel-title">Fundamentals of Predictive Project Management · Project Management Institute (PMI)</p>
-              <p class="panel-desc">
-                Covers traditional waterfall, Agile, and hybrid methodologies. Skilled in project
-                initiation, work breakdown structures, Gantt scheduling, stakeholder management,
-                risk registers, monitoring and evaluation, and formal project close-out documentation.
-              </p>
-              <div class="tags"><span class="tag">Agile</span><span class="tag">Waterfall</span><span class="tag">Risk Management</span><span class="tag">WBS</span><span class="tag">Critical Path Method</span><span class="tag">M&amp;E</span></div>
-            </div>
-            <div class="panel">
               <p class="panel-sub">Professional Certificate · 2023</p>
               <p class="panel-title">Google Data Analytics Professional Certificate · Coursera / Google</p>
               <p class="panel-desc">
@@ -1385,6 +1369,16 @@
                 development communications.
               </p>
               <div class="tags"><span class="tag">Donor Relations</span><span class="tag">Major Gifts</span><span class="tag">Grant Writing</span><span class="tag">Development Ethics</span></div>
+            </div>
+            <div class="panel">
+              <p class="panel-sub">Professional Development · 2024</p>
+              <p class="panel-title">Fundamentals of Predictive Project Management · Project Management Institute (PMI)</p>
+              <p class="panel-desc">
+                Covers traditional waterfall, Agile, and hybrid methodologies. Skilled in project
+                initiation, work breakdown structures, Gantt scheduling, stakeholder management,
+                risk registers, monitoring and evaluation, and formal project close-out documentation.
+              </p>
+              <div class="tags"><span class="tag">Agile</span><span class="tag">Waterfall</span><span class="tag">Risk Management</span><span class="tag">WBS</span><span class="tag">Critical Path Method</span><span class="tag">M&amp;E</span></div>
             </div>
             <div class="panel" style="grid-column: 1 / -1;">
               <p class="panel-sub">Additional Professional Development</p>
@@ -1627,126 +1621,104 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js" defer></script>
 
   <script>
-    // ── Starfield background (lightweight) ─────────────────
-    (function () {
-      const canvas = document.getElementById('star-canvas');
-      const ctx = canvas.getContext('2d');
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let w, h, stars = [];
-
-      function resize() {
-        w = canvas.width = window.innerWidth;
-        h = canvas.height = window.innerHeight;
-        const count = Math.min(140, Math.floor((w * h) / 11000));
-        stars = Array.from({ length: count }, () => ({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          r: Math.random() * 1.2 + 0.2,
-          a: Math.random() * 0.55 + 0.1,
-          tw: Math.random() * 0.012 + 0.003,
-          ph: Math.random() * Math.PI * 2
-        }));
-      }
-
-      let t = 0;
-      function frame() {
-        t += 1;
-        ctx.clearRect(0, 0, w, h);
-        for (const s of stars) {
-          const alpha = s.a * (0.65 + 0.35 * Math.sin(t * s.tw + s.ph));
-          ctx.beginPath();
-          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(255,238,208,' + alpha + ')';
-          ctx.fill();
-        }
-        if (!reduced && !document.hidden) requestAnimationFrame(frame);
-      }
-
-      resize();
-      window.addEventListener('resize', resize);
-      document.addEventListener('visibilitychange', () => { if (!document.hidden && !reduced) requestAnimationFrame(frame); });
-      if (reduced) { t = 1; frame(); } else frame();
-    })();
-
-    // ── 3D wireframe globe (Three.js) ──────────────────────
+    // ── Immersive 3D scene (Three.js) — persists across all chapters ──
     window.addEventListener('load', function () {
-      if (typeof THREE === 'undefined') return; // CDN failed — degrade gracefully
-      const el = document.getElementById('globe-canvas');
+      const el = document.getElementById('scene-canvas');
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (typeof THREE === 'undefined' || !el) return; // degrade gracefully to flat background
 
       const renderer = new THREE.WebGLRenderer({ canvas: el, alpha: true, antialias: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
-      camera.position.z = 5.4;
+      const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 200);
+      camera.position.z = 7;
 
+      // deep-space starfield with true 3D depth
+      const starGeo = new THREE.BufferGeometry();
+      const SN = 1300, sp = new Float32Array(SN * 3);
+      for (let i = 0; i < SN; i++) {
+        sp[i * 3]     = (Math.random() - 0.5) * 90;
+        sp[i * 3 + 1] = (Math.random() - 0.5) * 90;
+        sp[i * 3 + 2] = -5 - Math.random() * 70;
+      }
+      starGeo.setAttribute('position', new THREE.BufferAttribute(sp, 3));
+      const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({
+        color: 0xffeed0, size: 0.09, sizeAttenuation: true, transparent: true, opacity: 0.75
+      }));
+      scene.add(stars);
+
+      // wireframe globe with orbital ring + satellite
       const group = new THREE.Group();
       scene.add(group);
-
-      // wireframe sphere
       const wire = new THREE.Mesh(
-        new THREE.SphereGeometry(1.85, 28, 28),
-        new THREE.MeshBasicMaterial({ color: 0xe2a84e, wireframe: true, transparent: true, opacity: 0.085 })
+        new THREE.SphereGeometry(1.9, 28, 28),
+        new THREE.MeshBasicMaterial({ color: 0xe2a84e, wireframe: true, transparent: true, opacity: 0.08 })
       );
       group.add(wire);
-
-      // surface points
       const ptsGeo = new THREE.BufferGeometry();
       const N = 700, pos = new Float32Array(N * 3);
       for (let i = 0; i < N; i++) {
         const phi = Math.acos(2 * Math.random() - 1);
         const theta = Math.random() * Math.PI * 2;
-        pos[i * 3]     = 1.85 * Math.sin(phi) * Math.cos(theta);
-        pos[i * 3 + 1] = 1.85 * Math.cos(phi);
-        pos[i * 3 + 2] = 1.85 * Math.sin(phi) * Math.sin(theta);
+        pos[i * 3]     = 1.9 * Math.sin(phi) * Math.cos(theta);
+        pos[i * 3 + 1] = 1.9 * Math.cos(phi);
+        pos[i * 3 + 2] = 1.9 * Math.sin(phi) * Math.sin(theta);
       }
       ptsGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-      const pts = new THREE.Points(ptsGeo, new THREE.PointsMaterial({ color: 0xf3ddb0, size: 0.022, transparent: true, opacity: 0.75 }));
+      const pts = new THREE.Points(ptsGeo, new THREE.PointsMaterial({ color: 0xf3ddb0, size: 0.022, transparent: true, opacity: 0.6 }));
       group.add(pts);
-
-      // equatorial ring (orbit)
       const ring = new THREE.Mesh(
-        new THREE.TorusGeometry(2.5, 0.004, 8, 120),
-        new THREE.MeshBasicMaterial({ color: 0x57c8ae, transparent: true, opacity: 0.35 })
+        new THREE.TorusGeometry(2.6, 0.004, 8, 140),
+        new THREE.MeshBasicMaterial({ color: 0x57c8ae, transparent: true, opacity: 0.3 })
       );
       ring.rotation.x = Math.PI / 2.4;
       group.add(ring);
-
-      // satellite dot on the ring
       const sat = new THREE.Mesh(
         new THREE.SphereGeometry(0.035, 10, 10),
         new THREE.MeshBasicMaterial({ color: 0x57c8ae })
       );
       group.add(sat);
-
       group.rotation.z = -0.18;
 
       let mx = 0, my = 0;
       if (window.matchMedia('(pointer: fine)').matches) {
         window.addEventListener('mousemove', (e) => {
-          mx = (e.clientX / window.innerWidth - 0.5) * 0.35;
-          my = (e.clientY / window.innerHeight - 0.5) * 0.25;
+          mx = (e.clientX / window.innerWidth - 0.5);
+          my = (e.clientY / window.innerHeight - 0.5);
         }, { passive: true });
       }
 
       function size() {
-        const r = el.getBoundingClientRect();
-        renderer.setSize(r.width, r.height, false);
-        camera.aspect = r.width / r.height || 1;
+        renderer.setSize(window.innerWidth, window.innerHeight, false);
+        camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
+        group.scale.setScalar(window.innerWidth < 760 ? 0.7 : 1);
       }
       size();
       window.addEventListener('resize', size);
 
+      function progress() {
+        const dh = document.documentElement.scrollHeight - window.innerHeight;
+        return dh > 0 ? window.scrollY / dh : 0;
+      }
+
       let t = 0;
       function animate() {
         t += 0.0035;
+        const p = progress();
+        // globe drifts right → left → right as the visitor scrolls the chapters
+        const homeX = window.innerWidth < 760 ? 0 : 3.1;
+        group.position.x = homeX * Math.cos(p * Math.PI * 2) + mx * 0.35;
+        group.position.y = Math.sin(p * Math.PI) * -0.8 + 0.2;
         group.rotation.y += 0.0016;
-        group.rotation.x += (my - group.rotation.x + 0.08) * 0.04;
-        group.position.x = mx * 0.4;
-        const a = t * 2.1;
-        const rr = 2.5;
+        group.rotation.x = -0.08 + p * 0.6 + my * 0.15;
+        stars.rotation.y = t * 0.04 + p * 0.35;
+        stars.rotation.x = my * 0.04;
+        camera.position.x = mx * 0.5;
+        camera.position.y = -my * 0.4;
+        camera.lookAt(0, 0, 0);
+        const a = t * 2.1, rr = 2.6;
         sat.position.set(Math.cos(a) * rr, Math.sin(a) * rr * Math.sin(Math.PI / 2 - Math.PI / 2.4), Math.sin(a) * rr * Math.cos(Math.PI / 2 - Math.PI / 2.4));
         renderer.render(scene, camera);
         if (!reduced && !document.hidden) requestAnimationFrame(animate);
@@ -1759,10 +1731,10 @@
     (function () {
       const roles = [
         'Development Coordinator · Siloam Mission',
+        'Grants Management Professional',
         'Google-Certified Data Analyst',
-        'PMI-Trained Project Manager',
         'Published Social Science Researcher',
-        'Fundraising & Grants Professional'
+        'Fundraising & Donor Relations'
       ];
       const el = document.getElementById('role-rotator');
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
