@@ -1,0 +1,12 @@
+# Never apply line-ending conversion to binary assets
+*.pdf  binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.webp binary
+*.ico  binary
+
+# Normalize text files
+*.html text
+*.xml  text
+*.md   text
