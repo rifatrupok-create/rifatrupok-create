@@ -65,14 +65,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #040608;
-      --txt:       #f2f5f8;
-      --dim:       #9aa6b5;
-      --faint:     #5a6678;
-      --line:      rgba(255,255,255,0.12);
-      --line-soft: rgba(255,255,255,0.07);
-      --cyan:      #6ce4ff;
-      --mint:      #5eead4;
+      --bg:        #0e0c09;
+      --txt:       #f5f1e9;
+      --dim:       #b0a795;
+      --faint:     #7a7261;
+      --line:      rgba(245,241,233,0.14);
+      --line-soft: rgba(245,241,233,0.08);
+      --amber:     #e2a84e;
+      --teal:      #57c8ae;
       --sans:      'Space Grotesk', -apple-system, sans-serif;
       --mono:      'JetBrains Mono', 'SF Mono', monospace;
     }
@@ -88,7 +88,7 @@
       line-height: 1.6;
     }
 
-    ::selection { background: rgba(108,228,255,0.3); color: #fff; }
+    ::selection { background: rgba(226,168,78,0.3); color: #fff; }
 
     /* ── BACKGROUND ──────────────────────────────────────── */
     #star-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
@@ -102,7 +102,7 @@
     #scroll-progress {
       position: fixed; top: 0; left: 0;
       height: 2px; width: 0%;
-      background: linear-gradient(90deg, var(--cyan), var(--mint));
+      background: linear-gradient(90deg, var(--amber), var(--teal));
       z-index: 300;
     }
 
@@ -113,10 +113,10 @@
       display: flex; align-items: center;
       padding: 0 clamp(20px, 4vw, 48px);
       height: 64px;
-      background: linear-gradient(to bottom, rgba(4,6,8,0.85), transparent);
+      background: linear-gradient(to bottom, rgba(14,12,9,0.85), transparent);
       transition: background 0.35s;
     }
-    header.scrolled { background: rgba(4,6,8,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line-soft); }
+    header.scrolled { background: rgba(14,12,9,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line-soft); }
 
     .brand {
       font-family: var(--mono);
@@ -126,7 +126,7 @@
       margin-right: auto;
       white-space: nowrap;
     }
-    .brand b { color: var(--cyan); font-weight: 600; }
+    .brand b { color: var(--amber); font-weight: 600; }
 
     .top-links { display: flex; gap: 4px; list-style: none; }
     .top-links a {
@@ -168,7 +168,7 @@
     .mobile-menu {
       display: none;
       position: fixed; inset: 64px 0 0 0;
-      background: rgba(4,6,8,0.97);
+      background: rgba(14,12,9,0.97);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       z-index: 199;
@@ -189,7 +189,7 @@
       transition: color 0.2s;
     }
     .mobile-menu a:hover { color: var(--txt); }
-    .mobile-menu a::after { content: '→'; color: var(--cyan); }
+    .mobile-menu a::after { content: '→'; color: var(--amber); }
 
     /* ── CHAPTER (full-screen section) ───────────────────── */
     .chapter {
@@ -207,7 +207,7 @@
       font-family: var(--mono);
       font-size: 11px; font-weight: 600;
       letter-spacing: 0.34em; text-transform: uppercase;
-      color: var(--cyan);
+      color: var(--amber);
       margin-bottom: 22px;
       display: flex; align-items: center; gap: 14px;
     }
@@ -232,7 +232,7 @@
       margin-bottom: 44px;
     }
     .lede strong { color: var(--txt); font-weight: 500; }
-    .lede a { color: var(--mint); text-decoration: none; border-bottom: 1px dotted rgba(94,234,212,0.45); }
+    .lede a { color: var(--teal); text-decoration: none; border-bottom: 1px dotted rgba(87,200,174,0.45); }
 
     /* key facts strip */
     .facts {
@@ -302,17 +302,17 @@
       user-select: none;
     }
     details.more > summary::-webkit-details-marker { display: none; }
-    details.more > summary:hover { color: var(--cyan); }
+    details.more > summary:hover { color: var(--amber); }
     details.more > summary .plus {
       width: 30px; height: 30px;
       border: 1px solid var(--line);
       display: inline-flex; align-items: center; justify-content: center;
       font-size: 15px; font-weight: 400;
-      color: var(--cyan);
+      color: var(--amber);
       transition: transform 0.3s, border-color 0.2s;
       flex-shrink: 0;
     }
-    details.more[open] > summary .plus { transform: rotate(45deg); border-color: var(--cyan); }
+    details.more[open] > summary .plus { transform: rotate(45deg); border-color: var(--amber); }
     details.more > summary .hide-when-open { display: inline; }
     details.more > summary .show-when-open { display: none; }
     details.more[open] > summary .hide-when-open { display: none; }
@@ -340,7 +340,7 @@
       margin-bottom: 16px;
     }
     .prose strong { color: var(--txt); font-weight: 500; }
-    .prose a { color: var(--mint); text-decoration: none; border-bottom: 1px dotted rgba(94,234,212,0.45); }
+    .prose a { color: var(--teal); text-decoration: none; border-bottom: 1px dotted rgba(87,200,174,0.45); }
 
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -353,7 +353,7 @@
     }
     .panel:hover { border-color: var(--line); background: rgba(255,255,255,0.04); }
     .panel-title { font-size: 14.5px; font-weight: 600; color: var(--txt); margin-bottom: 8px; letter-spacing: -0.01em; }
-    .panel-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
+    .panel-sub { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
     .panel-desc { font-size: 12.5px; font-weight: 300; color: var(--dim); line-height: 1.7; }
 
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
@@ -374,7 +374,7 @@
       padding-left: 22px;
       position: relative;
     }
-    .bullets li::before { content: '→'; position: absolute; left: 0; color: var(--cyan); font-size: 12px; }
+    .bullets li::before { content: '→'; position: absolute; left: 0; color: var(--amber); font-size: 12px; }
 
     /* ── HERO ────────────────────────────────────────────── */
     #hero {
@@ -402,7 +402,7 @@
       font-family: var(--mono);
       font-size: 11px; font-weight: 600;
       letter-spacing: 0.34em; text-transform: uppercase;
-      color: var(--cyan);
+      color: var(--amber);
       margin-bottom: 24px;
     }
     h1 {
@@ -454,7 +454,7 @@
     .scroll-cue::after {
       content: '';
       width: 1px; height: 42px;
-      background: linear-gradient(to bottom, var(--cyan), transparent);
+      background: linear-gradient(to bottom, var(--amber), transparent);
       animation: cue 2s ease-in-out infinite;
     }
     @keyframes cue { 0%,100% { opacity: 0.25; } 50% { opacity: 1; } }
@@ -498,11 +498,11 @@
       border: 1px solid;
       white-space: nowrap;
     }
-    .b-current { color: var(--mint); border-color: rgba(94,234,212,0.4); }
-    .b-canada  { color: var(--cyan); border-color: rgba(108,228,255,0.4); }
+    .b-current { color: var(--teal); border-color: rgba(87,200,174,0.4); }
+    .b-canada  { color: var(--amber); border-color: rgba(226,168,78,0.4); }
     .b-intl    { color: var(--faint); border-color: var(--line); }
     .role-toggle {
-      font-size: 16px; color: var(--cyan);
+      font-size: 16px; color: var(--amber);
       transition: transform 0.3s;
       text-align: center;
     }
@@ -515,7 +515,7 @@
     .tool-row { display: flex; align-items: center; gap: 14px; }
     .tool-name { font-family: var(--mono); font-size: 11.5px; font-weight: 500; color: var(--txt); width: 142px; flex-shrink: 0; letter-spacing: 0.03em; }
     .tool-bar-bg { flex: 1; height: 3px; background: rgba(255,255,255,0.09); overflow: hidden; }
-    .tool-bar-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--cyan), var(--mint)); transition: width 1.3s cubic-bezier(0.22,1,0.36,1); }
+    .tool-bar-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--amber), var(--teal)); transition: width 1.3s cubic-bezier(0.22,1,0.36,1); }
     .tool-level { font-family: var(--mono); font-size: 9.5px; color: var(--faint); width: 76px; text-align: right; flex-shrink: 0; letter-spacing: 0.12em; text-transform: uppercase; }
 
     /* ── RESEARCH highlight cards ────────────────────────── */
@@ -528,11 +528,11 @@
       display: flex; flex-direction: column; gap: 12px;
       transition: border-color 0.25s, background 0.25s, transform 0.25s;
     }
-    .hp-card:hover { border-color: rgba(108,228,255,0.4); background: rgba(255,255,255,0.04); transform: translateY(-3px); }
-    .hp-meta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan); }
+    .hp-card:hover { border-color: rgba(226,168,78,0.4); background: rgba(255,255,255,0.04); transform: translateY(-3px); }
+    .hp-meta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); }
     .hp-title { font-size: clamp(16px, 1.6vw, 19px); font-weight: 600; line-height: 1.4; color: var(--txt); letter-spacing: -0.01em; flex: 1; }
     .hp-stats { font-family: var(--mono); font-size: 11px; color: var(--faint); letter-spacing: 0.04em; }
-    .hp-link { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mint); }
+    .hp-link { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); }
 
     /* ── PUBLICATION ROWS ────────────────────────────────── */
     .pub-rows { border-top: 1px solid var(--line-soft); }
@@ -544,11 +544,11 @@
       transition: background 0.2s;
     }
     a.pub-row:hover { background: rgba(255,255,255,0.025); }
-    .pub-row-year { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--cyan); min-width: 44px; }
+    .pub-row-year { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--amber); min-width: 44px; }
     .pub-row-title { flex: 1; font-size: 14px; font-weight: 400; color: var(--txt); line-height: 1.55; }
     .pub-row-title em { color: var(--dim); font-style: italic; font-weight: 300; }
     .pub-row-kind { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); white-space: nowrap; }
-    .pub-row-arrow { color: var(--cyan); }
+    .pub-row-arrow { color: var(--amber); }
 
     /* ── CONTACT ─────────────────────────────────────────── */
     #contact .chapter-inner { text-align: left; }
@@ -569,7 +569,7 @@
     .channel:hover { background: rgba(255,255,255,0.025); padding-left: 12px; }
     .channel-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint); }
     .channel-value { font-size: 14px; font-weight: 500; color: var(--txt); display: flex; align-items: center; gap: 10px; }
-    .channel-value .arr { color: var(--cyan); }
+    .channel-value .arr { color: var(--amber); }
 
     .cf-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
     .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -593,17 +593,17 @@
       border-radius: 0;
     }
     .cf-field select { appearance: none; -webkit-appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--dim) 50%), linear-gradient(135deg, var(--dim) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
-    .cf-field select option { background: #0a0e14; color: var(--txt); }
+    .cf-field select option { background: #171410; color: var(--txt); }
     .cf-field input::placeholder, .cf-field textarea::placeholder { color: var(--faint); }
-    .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { border-color: rgba(108,228,255,0.55); background: rgba(255,255,255,0.05); }
+    .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { border-color: rgba(226,168,78,0.55); background: rgba(255,255,255,0.05); }
     .cf-field textarea { min-height: 120px; }
     .cf-success {
       display: none;
-      border: 1px solid rgba(94,234,212,0.4);
-      background: rgba(94,234,212,0.06);
+      border: 1px solid rgba(87,200,174,0.4);
+      background: rgba(87,200,174,0.06);
       padding: 15px 20px;
       font-size: 13.5px;
-      color: var(--mint);
+      color: var(--teal);
       margin-top: 16px;
     }
 
@@ -620,9 +620,9 @@
     #back-to-top {
       position: fixed; bottom: 26px; right: 26px;
       width: 46px; height: 46px;
-      background: rgba(4,6,8,0.8);
+      background: rgba(14,12,9,0.8);
       backdrop-filter: blur(10px);
-      color: var(--cyan);
+      color: var(--amber);
       border: 1px solid var(--line);
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
@@ -632,13 +632,13 @@
       z-index: 150;
     }
     #back-to-top.visible { opacity: 1; transform: translateY(0); }
-    #back-to-top:hover { border-color: var(--cyan); }
+    #back-to-top:hover { border-color: var(--amber); }
 
     #copy-toast {
       position: fixed; bottom: 86px; right: 26px;
-      background: rgba(4,6,8,0.92);
-      border: 1px solid rgba(94,234,212,0.4);
-      color: var(--mint);
+      background: rgba(14,12,9,0.92);
+      border: 1px solid rgba(87,200,174,0.4);
+      color: var(--teal);
       font-family: var(--mono);
       font-size: 11px; letter-spacing: 0.08em;
       padding: 9px 18px;
@@ -649,17 +649,28 @@
     }
     #copy-toast.show { opacity: 1; transform: translateY(0); }
 
-    /* photo inside mission details */
-    .mission-photo {
+    /* mission layout with visible portrait */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: clamp(36px, 5vw, 72px);
+      align-items: center;
+    }
+    .mission-portrait { margin: 0; justify-self: end; width: 100%; max-width: 360px; }
+    .mission-portrait img {
       width: 100%;
-      max-width: 320px;
       aspect-ratio: 4/5;
       object-fit: cover; object-position: center top;
       border: 1px solid var(--line);
-      filter: saturate(0.9) contrast(1.04);
+      filter: saturate(0.94) contrast(1.03);
+      display: block;
     }
-    .mission-flex { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
-    .mission-flex .prose { flex: 1; min-width: 280px; }
+    .mission-portrait figcaption {
+      font-family: var(--mono);
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--faint);
+      margin-top: 12px; line-height: 1.7;
+    }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
@@ -679,6 +690,8 @@
       .hero-facts { gap: 24px; }
       .chapter { padding-top: 96px; padding-bottom: 72px; min-height: auto; }
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .mission-grid { grid-template-columns: 1fr; }
+      .mission-portrait { justify-self: start; max-width: 320px; }
       .highlight-pubs { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
       .cf-row { grid-template-columns: 1fr; }
@@ -778,29 +791,36 @@
   <!-- ════════ 01 MISSION ════════ -->
   <section class="chapter" id="mission">
     <div class="chapter-inner">
-      <p class="kicker reveal"><span class="idx">01</span> The Mission</p>
-      <h2 class="reveal">Evidence &amp; purpose.</h2>
-      <p class="lede reveal">
-        <strong>Development Coordinator at Siloam Mission</strong> — Winnipeg's largest shelter
-        and housing programme for Indigenous and marginalized peoples. I manage a
-        $17M+ grant portfolio across 23+ federal, provincial, and municipal funding
-        agreements, pairing research rigour with data-driven strategy.
-      </p>
+      <div class="mission-grid">
+        <div>
+          <p class="kicker reveal"><span class="idx">01</span> The Mission</p>
+          <h2 class="reveal">Evidence &amp; purpose.</h2>
+          <p class="lede reveal">
+            <strong>Development Coordinator at Siloam Mission</strong> — Winnipeg's largest shelter
+            and housing programme for Indigenous and marginalized peoples. I manage a
+            $17M+ grant portfolio across 23+ federal, provincial, and municipal funding
+            agreements, pairing research rigour with data-driven strategy.
+          </p>
 
-      <div class="facts reveal">
-        <div class="fact"><span class="fact-num" data-count="23" data-suffix="+">23+</span><span class="fact-label">Active Agreements</span></div>
-        <div class="fact"><span class="fact-num">0</span><span class="fact-label">Missed Deadlines</span></div>
-        <div class="fact"><span class="fact-num" data-count="8">8</span><span class="fact-label">Certifications</span></div>
-        <div class="fact"><span class="fact-num" data-count="2">2</span><span class="fact-label">Continents Worked</span></div>
+          <div class="facts reveal">
+            <div class="fact"><span class="fact-num" data-count="23" data-suffix="+">23+</span><span class="fact-label">Active Agreements</span></div>
+            <div class="fact"><span class="fact-num">0</span><span class="fact-label">Missed Deadlines</span></div>
+            <div class="fact"><span class="fact-num" data-count="9">9</span><span class="fact-label">Certifications</span></div>
+            <div class="fact"><span class="fact-num" data-count="2">2</span><span class="fact-label">Continents Worked</span></div>
+          </div>
+        </div>
+
+        <figure class="mission-portrait reveal">
+          <img src="photo.jpg" alt="Rifat Islam Rupok — Development Coordinator at Siloam Mission, Winnipeg" loading="lazy" />
+          <figcaption>Rifat Islam Rupok · Development Coordinator, Siloam Mission</figcaption>
+        </figure>
       </div>
 
       <details class="more reveal">
         <summary><span class="plus">+</span><span class="hide-when-open">Full profile &amp; core expertise</span><span class="show-when-open">Close</span></summary>
         <div class="more-body">
 
-          <div class="mission-flex">
-            <img src="photo.jpg" alt="Rifat Islam Rupok — Development Coordinator at Siloam Mission, Winnipeg" class="mission-photo" loading="lazy" />
-            <div class="prose">
+          <div class="prose">
               <p>
                 With <strong>6+ years of progressive experience</strong> spanning fundraising, grant management,
                 data analytics, and community development, I bring a research-informed,
@@ -821,13 +841,12 @@
                 <a href="https://flowly.today" target="_blank" rel="noopener">Flowly</a> —
                 a small, ad-free RSS news reader I built as a hobby project (public beta).
               </p>
-            </div>
           </div>
 
           <p class="block-title">Four Pillars of Practice</p>
           <div class="grid-2">
             <div class="panel">
-              <p class="panel-sub">01 · PMI Certified</p>
+              <p class="panel-sub">01 · PMI Trained</p>
               <p class="panel-title">Project Management</p>
               <p class="panel-desc">
                 Coordinating multi-stakeholder, multi-stream programmes from initiation through
@@ -881,7 +900,7 @@
       <p class="kicker reveal"><span class="idx">02</span> The Portfolio</p>
       <h2 class="reveal">$17M+ under management.</h2>
       <p class="lede reveal">
-        PMI-certified, with demonstrated experience leading complex multi-funder
+        PMI-trained, with demonstrated experience leading complex multi-funder
         programmes simultaneously — <strong>zero missed deadlines</strong> across CMHC, PHAC,
         MB Housing, City of Winnipeg, and private foundation streams.
       </p>
@@ -1246,11 +1265,11 @@
             </div>
             <div class="panel">
               <p class="panel-title">Digital Media &amp; Collective Violence</p>
-              <p class="panel-desc">Original thesis research (University of Dhaka, 2018) examining how social media platforms enable, amplify, and structure acts of collective violence in Bangladesh — using discourse analysis, content mapping, and incident data to assess platform affordance theory in conflict contexts.</p>
+              <p class="panel-desc">Original monograph research (University of Dhaka, 2018) examining how social media platforms enable, amplify, and structure acts of collective violence in Bangladesh — using discourse analysis, content mapping, and incident data to assess platform affordance theory in conflict contexts.</p>
             </div>
             <div class="panel">
               <p class="panel-title">Housing, Homelessness &amp; Urban Policy</p>
-              <p class="panel-desc">Applied policy research on housing equity, supervised consumption, and urban planning in Winnipeg — drawing on frontline programme experience at Siloam Mission. Published letters in the Winnipeg Free Press (2025).</p>
+              <p class="panel-desc">Applied policy research on housing equity, supervised consumption, and urban planning in Winnipeg — drawing on frontline programme experience at Siloam Mission. Published letters in the Winnipeg Free Press (2024–2025).</p>
             </div>
             <div class="panel">
               <p class="panel-title">Education Access &amp; Technology Equity</p>
@@ -1298,8 +1317,10 @@
       <p class="kicker reveal"><span class="idx">06</span> The Credentials</p>
       <h2 class="reveal">Built to think.<br>Trained to deliver.</h2>
       <p class="lede reveal">
-        A thesis-based master's degree in Peace &amp; Conflict Studies, reinforced by
-        professional certifications from Google, PMI, and UC Davis.
+        Bachelor's and thesis-based master's degrees in Peace &amp; Conflict Studies,
+        reinforced by professional certificates from Google and UC Davis, PMI project
+        management training, and sector credentials in privacy, mental health, and
+        crisis intervention.
       </p>
 
       <div class="facts reveal">
@@ -1316,7 +1337,7 @@
           <p class="block-title">Education &amp; Certifications</p>
           <div class="grid-2">
             <div class="panel">
-              <p class="panel-sub">2016 – 2018 · Dhaka, Bangladesh</p>
+              <p class="panel-sub">2019 · Dhaka, Bangladesh</p>
               <p class="panel-title">Master of Social Science — Peace &amp; Conflict Studies · University of Dhaka</p>
               <p class="panel-desc">
                 Thesis-based master's degree in one of South Asia's leading social science programmes.
@@ -1326,8 +1347,18 @@
               <div class="tags"><span class="tag">Conflict Theory</span><span class="tag">Research Methods</span><span class="tag">Political Violence</span><span class="tag">Peace Processes</span></div>
             </div>
             <div class="panel">
-              <p class="panel-sub">Professional Certification</p>
-              <p class="panel-title">PMI Project Management Certification · Project Management Institute</p>
+              <p class="panel-sub">2015 – 2018 · Dhaka, Bangladesh</p>
+              <p class="panel-title">Bachelor of Social Science — Peace &amp; Conflict Studies · University of Dhaka</p>
+              <p class="panel-desc">
+                Undergraduate honours degree in Peace and Conflict Studies with foundational
+                training in social science research methods, political science, and
+                development studies.
+              </p>
+              <div class="tags"><span class="tag">Social Research</span><span class="tag">Political Science</span><span class="tag">Development Studies</span></div>
+            </div>
+            <div class="panel">
+              <p class="panel-sub">Professional Development · 2024</p>
+              <p class="panel-title">Fundamentals of Predictive Project Management · Project Management Institute (PMI)</p>
               <p class="panel-desc">
                 Covers traditional waterfall, Agile, and hybrid methodologies. Skilled in project
                 initiation, work breakdown structures, Gantt scheduling, stakeholder management,
@@ -1336,7 +1367,7 @@
               <div class="tags"><span class="tag">Agile</span><span class="tag">Waterfall</span><span class="tag">Risk Management</span><span class="tag">WBS</span><span class="tag">Critical Path Method</span><span class="tag">M&amp;E</span></div>
             </div>
             <div class="panel">
-              <p class="panel-sub">Professional Certificate</p>
+              <p class="panel-sub">Professional Certificate · 2023</p>
               <p class="panel-title">Google Data Analytics Professional Certificate · Coursera / Google</p>
               <p class="panel-desc">
                 8-course professional certificate covering data cleaning, analysis, and
@@ -1346,7 +1377,7 @@
               <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">Tableau</span><span class="tag">BigQuery</span></div>
             </div>
             <div class="panel">
-              <p class="panel-sub">Certificate</p>
+              <p class="panel-sub">Certificate · 2023</p>
               <p class="panel-title">Fundraising &amp; Development Foundations · UC Davis Continuing &amp; Professional Education</p>
               <p class="panel-desc">
                 Covers the complete fundraising and development function: donor relations, gift
@@ -1354,6 +1385,12 @@
                 development communications.
               </p>
               <div class="tags"><span class="tag">Donor Relations</span><span class="tag">Major Gifts</span><span class="tag">Grant Writing</span><span class="tag">Development Ethics</span></div>
+            </div>
+            <div class="panel" style="grid-column: 1 / -1;">
+              <p class="panel-sub">Additional Professional Development</p>
+              <p class="panel-title">Applied &amp; Sector Credentials</p>
+              <p class="panel-desc">Continuing education supporting frontline non-profit work, data practice, and privacy compliance.</p>
+              <div class="tags"><span class="tag">Six Sigma White Belt — Educate360 (2025)</span><span class="tag">Python for Data Science, AI &amp; Development — IBM (2023)</span><span class="tag">Mental Health First Aid (2023)</span><span class="tag">Non-Violent Crisis Intervention (2023)</span><span class="tag">PHIA Level 1 — Privacy</span><span class="tag">SAP S/4HANA Fundamentals (2026)</span></div>
             </div>
           </div>
 
@@ -1376,7 +1413,7 @@
             </div>
             <div class="panel">
               <p class="panel-title">Project Management</p>
-              <p class="panel-desc">PMI certified. Agile and traditional PM across complex, multi-funder programmes. Stakeholder mapping, risk management, WBS, Gantt, M&amp;E framework design.</p>
+              <p class="panel-desc">PMI trained. Agile and traditional PM across complex, multi-funder programmes. Stakeholder mapping, risk management, WBS, Gantt, M&amp;E framework design.</p>
               <div class="tags"><span class="tag">Agile</span><span class="tag">Waterfall</span><span class="tag">Risk Register</span><span class="tag">Logic Model</span></div>
             </div>
             <div class="panel">
@@ -1417,8 +1454,9 @@
       <p class="kicker reveal"><span class="idx">07</span> The Record</p>
       <h2 class="reveal">Publications &amp; press.</h2>
       <p class="lede reveal">
-        Working papers, field research reports, a thesis monograph, and published
-        letters — read by scholars, policy analysts, and practitioners worldwide.
+        Working papers, field research reports, a research monograph, and published
+        letters — indexed on SSRN and Google Scholar, read by scholars, policy
+        analysts, and practitioners worldwide.
       </p>
 
       <div class="pub-rows reveal">
@@ -1435,19 +1473,20 @@
           <span class="pub-row-arrow">↗</span>
         </a>
         <div class="pub-row">
-          <span class="pub-row-year">2025</span>
-          <span class="pub-row-title">Letters to the Editor — <em>Winnipeg Free Press</em>: housing equity, supervised consumption sites, urban planning, and addictions policy in Winnipeg</span>
-          <span class="pub-row-kind">Op-Ed / Letters</span>
+          <span class="pub-row-year">2024–25</span>
+          <span class="pub-row-title">Letters to the Editor — <em>Winnipeg Free Press</em>: "City has unique opportunity" (May 2024), "Time for supervised consumption site is now" (Dec 2024), "Combating addiction" (Dec 2024), "Racism study questioned" (Jun 2025)</span>
+          <span class="pub-row-kind">Op-Ed / Letters ×4</span>
         </div>
-        <div class="pub-row">
+        <a href="https://doi.org/10.53832/edtechhub.0063" target="_blank" rel="noopener" class="pub-row">
           <span class="pub-row-year">2021</span>
-          <span class="pub-row-title">Integration of Technology in Education for Marginalized Children in the Korail Slum of Dhaka during the COVID-19 Pandemic — <em>Beyond Peace Research Report</em></span>
-          <span class="pub-row-kind">Field Research Report</span>
-        </div>
+          <span class="pub-row-title">Integration of Technology in Education for Marginalized Children in the Korail Slum of Dhaka during the COVID-19 Pandemic — <em>EdTech Hub Working Paper / Beyond Peace</em></span>
+          <span class="pub-row-kind">Working Paper · DOI</span>
+          <span class="pub-row-arrow">↗</span>
+        </a>
         <div class="pub-row">
           <span class="pub-row-year">2018</span>
-          <span class="pub-row-title">Social Media's Influence on Acts of Collective Violence in Bangladesh — <em>MSS Thesis Monograph, University of Dhaka</em></span>
-          <span class="pub-row-kind">Thesis Monograph</span>
+          <span class="pub-row-title">Social Media's Influence on Acts of Collective Violence in Bangladesh — <em>Research Monograph, Dept. of Peace and Conflict Studies, University of Dhaka</em></span>
+          <span class="pub-row-kind">Research Monograph</span>
         </div>
       </div>
 
@@ -1456,12 +1495,13 @@
         <div class="more-body">
           <div class="grid-2">
             <div class="panel">
-              <p class="panel-sub">Winnipeg Free Press · 2025</p>
+              <p class="panel-sub">Winnipeg Free Press · 2024–2025</p>
               <p class="panel-title">Housing Equity &amp; Urban Policy — Letters to the Editor</p>
               <p class="panel-desc">
-                Published multiple letters in 2025 addressing housing equity, supervised consumption sites,
-                urban planning, and addictions policy in Winnipeg — contributing a frontline development
-                professional's evidence-based perspective to public discourse.
+                Published four letters between May 2024 and June 2025 — "City has unique opportunity,"
+                "Time for supervised consumption site is now," "Combating addiction," and "Racism study
+                questioned" — contributing a frontline development professional's evidence-based
+                perspective on housing equity, supervised consumption, urban planning, and addictions policy.
               </p>
             </div>
             <div class="panel">
@@ -1480,6 +1520,7 @@
                 As Managing Partner of Beyond Peace, co-authored and led a field research report on
                 technology integration in education for marginalised children during the pandemic — bridging
                 community-level data collection with policy-level recommendations for education equity.
+                Published as an EdTech Hub working paper (DOI: 10.53832/edtechhub.0063).
               </p>
             </div>
             <div class="panel">
@@ -1578,7 +1619,7 @@
     <p>© 2026 RIFAT ISLAM RUPOK — WINNIPEG, MANITOBA</p>
     <div class="footer-right">
       <p id="current-date"></p>
-      <p>LAST UPDATED: JUNE 11, 2026</p>
+      <p>LAST UPDATED: JULY 21, 2026</p>
     </div>
   </footer>
 
@@ -1615,7 +1656,7 @@
           const alpha = s.a * (0.65 + 0.35 * Math.sin(t * s.tw + s.ph));
           ctx.beginPath();
           ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(200,225,255,' + alpha + ')';
+          ctx.fillStyle = 'rgba(255,238,208,' + alpha + ')';
           ctx.fill();
         }
         if (!reduced && !document.hidden) requestAnimationFrame(frame);
@@ -1646,7 +1687,7 @@
       // wireframe sphere
       const wire = new THREE.Mesh(
         new THREE.SphereGeometry(1.85, 28, 28),
-        new THREE.MeshBasicMaterial({ color: 0x6ce4ff, wireframe: true, transparent: true, opacity: 0.085 })
+        new THREE.MeshBasicMaterial({ color: 0xe2a84e, wireframe: true, transparent: true, opacity: 0.085 })
       );
       group.add(wire);
 
@@ -1661,13 +1702,13 @@
         pos[i * 3 + 2] = 1.85 * Math.sin(phi) * Math.sin(theta);
       }
       ptsGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-      const pts = new THREE.Points(ptsGeo, new THREE.PointsMaterial({ color: 0x9fdcff, size: 0.022, transparent: true, opacity: 0.75 }));
+      const pts = new THREE.Points(ptsGeo, new THREE.PointsMaterial({ color: 0xf3ddb0, size: 0.022, transparent: true, opacity: 0.75 }));
       group.add(pts);
 
       // equatorial ring (orbit)
       const ring = new THREE.Mesh(
         new THREE.TorusGeometry(2.5, 0.004, 8, 120),
-        new THREE.MeshBasicMaterial({ color: 0x5eead4, transparent: true, opacity: 0.35 })
+        new THREE.MeshBasicMaterial({ color: 0x57c8ae, transparent: true, opacity: 0.35 })
       );
       ring.rotation.x = Math.PI / 2.4;
       group.add(ring);
@@ -1675,7 +1716,7 @@
       // satellite dot on the ring
       const sat = new THREE.Mesh(
         new THREE.SphereGeometry(0.035, 10, 10),
-        new THREE.MeshBasicMaterial({ color: 0x5eead4 })
+        new THREE.MeshBasicMaterial({ color: 0x57c8ae })
       );
       group.add(sat);
 
@@ -1719,7 +1760,7 @@
       const roles = [
         'Development Coordinator · Siloam Mission',
         'Google-Certified Data Analyst',
-        'PMI-Certified Project Manager',
+        'PMI-Trained Project Manager',
         'Published Social Science Researcher',
         'Fundraising & Grants Professional'
       ];
