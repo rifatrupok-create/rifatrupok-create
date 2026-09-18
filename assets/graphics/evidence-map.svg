@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" fill="none">
+<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0v28" stroke="#58877b" stroke-width=".5" opacity=".2"/></pattern></defs>
+<path fill="#bcd6d4" d="M0 0h640v300H0z"/><path fill="url(#grid)" d="M0 0h640v300H0z"/>
+<g stroke="#5c8a7d" opacity=".5"><path d="M116 89C225 89 220 151 318 151S424 89 526 89M116 129C225 129 220 151 318 151S424 129 526 129M116 169C225 169 220 151 318 151S424 169 526 169M116 209C225 209 220 151 318 151S424 209 526 209"/></g>
+<g fill="#e4efdf" stroke="#7ca293"><rect x="68" y="72" width="99" height="155" rx="12"/><rect x="475" y="72" width="99" height="155" rx="12"/></g>
+<g fill="#739b88"><rect x="87" y="91" width="13" height="13" rx="3"/><rect x="110" y="91" width="13" height="13" rx="3"/><rect x="133" y="91" width="13" height="13" rx="3"/><rect x="87" y="115" width="13" height="13" rx="3"/><rect x="110" y="115" width="13" height="13" rx="3"/><rect x="133" y="115" width="13" height="13" rx="3"/><rect x="87" y="139" width="13" height="13" rx="3"/><rect x="110" y="139" width="13" height="13" rx="3"/><rect x="133" y="139" width="13" height="13" rx="3"/></g>
+<circle cx="320" cy="151" r="54" fill="#2c594c"/><circle cx="320" cy="151" r="68" stroke="#5a8476" stroke-dasharray="2 5"/><path d="m298 151 14 14 29-29" stroke="#e4efdf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#547d60" stroke-linecap="round"><path d="M493 95h61m-61 17h42m-42 26h61m-61 17h52m-52 17h32" stroke-width="4"/></g>
+<g font-family="Arial,sans-serif" font-size="9" fill="#2c594c" text-anchor="middle" letter-spacing=".8"><text x="117" y="196">INFORMATION</text><text x="320" y="238">VERIFY &amp; SYNTHESISE</text><text x="525" y="196">INSIGHT</text></g>
+<g font-family="Arial,sans-serif" font-size="8" letter-spacing="1.5" fill="#355c53"><text x="28" y="28">03 / FROM EVIDENCE TO DECISIONS</text><text x="28" y="277">ILLUSTRATIVE WORKFLOW / NO CONFIDENTIAL DATA</text></g><path d="M604 23h10m-5-5v10M604 272h10m-5-5v10" stroke="#4f7669"/>
+</svg>

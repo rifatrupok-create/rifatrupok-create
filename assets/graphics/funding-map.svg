@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" fill="none">
+<defs><pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#78945d" opacity=".24"/></pattern><radialGradient id="wash"><stop stop-color="#eef3d4"/><stop offset="1" stop-color="#d7e5ba"/></radialGradient></defs>
+<path fill="url(#wash)" d="M0 0h640v300H0z"/><path fill="url(#grid)" d="M0 0h640v300H0z"/>
+<g stroke="#76935e" stroke-width="1" opacity=".55"><path d="M157 90h36q20 0 36 20l51 40M157 150h123M157 210h36q20 0 36-20l51-40M356 150h42q20 0 35-20l22-28h30M356 150h129M356 150h42q20 0 35 20l22 28h30"/><circle cx="320" cy="150" r="69"/><circle cx="320" cy="150" r="84" stroke-dasharray="2 6" opacity=".45"/></g>
+<g fill="#f7f9ec" stroke="#a7b98e"><rect x="56" y="70" width="103" height="40" rx="20"/><rect x="56" y="130" width="103" height="40" rx="20"/><rect x="56" y="190" width="103" height="40" rx="20"/><rect x="483" y="82" width="105" height="40" rx="20"/><rect x="483" y="130" width="105" height="40" rx="20"/><rect x="483" y="178" width="105" height="40" rx="20"/></g>
+<circle cx="320" cy="150" r="53" fill="#2f493b"/><circle cx="260" cy="116" r="4" fill="#2f493b"/><circle cx="389" cy="150" r="4" fill="#2f493b"/>
+<g font-family="Arial,sans-serif" text-anchor="middle" fill="#2f493b" font-size="11"><text x="108" y="94">Government</text><text x="108" y="154">Foundations</text><text x="108" y="214">Programmes</text><text x="536" y="106">Applications</text><text x="536" y="154">Compliance</text><text x="536" y="202">Reporting</text></g>
+<text x="320" y="153" font-family="Georgia,serif" font-size="37" fill="#f0f5df" text-anchor="middle">23+</text><text x="320" y="173" font-family="Arial,sans-serif" font-size="7" letter-spacing="1.1" fill="#d6e3c8" text-anchor="middle">AGREEMENTS</text>
+<g font-family="Arial,sans-serif" font-size="8" letter-spacing="1.6" fill="#3d5636"><text x="28" y="28">01 / FUNDING ECOSYSTEM</text><text x="28" y="277">CONNECTING REQUIREMENTS, PEOPLE &amp; PURPOSE</text></g><path d="M604 23h10m-5-5v10M604 272h10m-5-5v10" stroke="#597744"/>
+</svg>
