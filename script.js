@@ -47,6 +47,20 @@
       });
     }, { rootMargin: '-15% 0px -50% 0px' });
     document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.classList.add('reveal-ready');
+      const revealItems = document.querySelectorAll('.section-heading, .work-card, .capabilities > div, .experience-row, .portrait-wrap, .about-copy, .public-outreach, .publication-list > a, .contact-inner');
+      revealItems.forEach(item => item.classList.add('reveal-item'));
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      revealItems.forEach(item => revealObserver.observe(item));
+    }
   }
   document.querySelector('#copy-email').addEventListener('click', async () => {
     const status = document.querySelector('#copy-status');
