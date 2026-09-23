@@ -28,3 +28,14 @@
 @media(max-width:1000px){.public-outreach{gap:35px;padding:30px}.outreach-intro h3{font-size:31px}.letter-meta{flex-wrap:wrap;gap:3px 14px}}
 @media(max-width:760px){.public-outreach{grid-template-columns:1fr;padding:26px 23px;gap:30px;margin-bottom:33px}.outreach-intro h3{font-size:32px}.outreach-intro>p:not(.eyebrow){font-size:12px}.outreach-letters{border-top:1px solid var(--line)}.outreach-letters li:first-child{padding-top:20px}.outreach-letters h4{font-size:16px}.letter-meta{font-size:9px}.outreach-publication{font-size:26px}}
 @media print{.public-outreach{background:#fff;break-inside:avoid}.outreach-intro>.eyebrow,.letter-meta>span{color:#000}}
+
+/* PlainPage — second built project, featured as a wide closing card in its own paper/cobalt palette */
+.plainpage-card{grid-column:1/-1}
+.plainpage-card .project-art{aspect-ratio:640/260;height:auto}
+.plainpage-art{background:#F8F7F3;color:#15171C;background-image:linear-gradient(#e3e1da 1px,transparent 1px),linear-gradient(90deg,#e3e1da 1px,transparent 1px);background-size:22px 22px}
+.plainpage-window{position:absolute;inset:36px 48px;background:#fff;border:1px solid #e3e1da;box-shadow:0 14px 32px #15171c14;border-radius:18px;transform:rotate(-1.5deg);padding:18px}
+.plainpage-window .window-top>span:first-child{font-family:Manrope,Arial,sans-serif;font-weight:800;font-size:20px;letter-spacing:-.04em;color:#15171C}
+.plainpage-accent{color:#3148F5}
+.plainpage-symbol{display:block;border-radius:10px}
+@media(max-width:760px){.plainpage-card .project-art{aspect-ratio:640/300}.plainpage-window{inset:28px 32px}}
+@media print{.plainpage-art{background:#fff;background-image:none}}

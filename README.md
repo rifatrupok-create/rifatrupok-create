@@ -15,6 +15,7 @@ Full list on my [SSRN author page](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth
 #### Things I build
 
 - **[Flowly](https://flowly.today)** — a minimalist RSS reader for a calmer information diet
+- **[PlainPage](https://pdf.rupokri.ca)** — free, browser-only PDF toolkit (merge, split, compress, convert); no uploads, no account, no watermark
 - **[Lumina-OP](https://github.com/rifatrupok-create/Lumina-OP)** — open-source, self-hosted RSS aggregator (Next.js + Prisma/PostgreSQL)
 - **[verbatype](https://github.com/rifatrupok-create/verbatype)** — Windows utility that retypes documents via emulated keystrokes (C#)
 
